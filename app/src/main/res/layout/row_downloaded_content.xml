@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_black"
+    android:padding="@dimen/dp_12">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvContentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivContentImage"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/tab_grey"
+            android:contentDescription="@null"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/HeaderMediumStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@id/rightArrow"
+        app:layout_constraintStart_toEndOf="@id/cvContentImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tom and Jerry " />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        style="@style/Subtitle_1_MediumStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightArrow"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="Expires today" />
+
+    <ImageButton
+        android:id="@+id/rightArrow"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

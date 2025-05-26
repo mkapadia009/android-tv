@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black">
+
+    <LinearLayout
+        android:id="@+id/llDuration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<TextView
+            style="@style/HeaderMediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="Season 1"
+            android:textColor="@color/tab_text_grey" />
+
+        <TextView
+            style="@style/Header_2_SemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="Season 1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_22" />
+
+        <TextView
+            style="@style/HeaderMediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="Season 1"
+            android:textColor="@color/tab_text_grey" />-->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_20"
+        android:onClick="finishActivity"
+        android:src="@drawable/close_circle" />
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/text_user"
+        style="@style/Subtitle_1_SemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:shadowColor="@color/colorDarkerGray"
+        android:shadowDx="-1"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/text_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sushil" />
+
+    <TextView
+        android:id="@+id/text_question"
+        style="@style/TitleRegularStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:shadowColor="@color/colorDarkerGray"
+        android:shadowDx="-1"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/text_timestamp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_user"
+        tools:text="Hello This is my Question?" />
+
+    <TextView
+        android:id="@+id/text_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:shadowColor="@color/colorDarkerGray"
+        android:shadowDx="-1"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_question"
+        app:layout_constraintTop_toBottomOf="@id/text_user"
+        tools:text="12:00 am" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    tools:context=".fragment.CouponFragment">
+
+    <Button
+        android:id="@+id/btRedeemCoupon"
+        style="@style/TitleSemiBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_accent"
+        android:onClick="onClick"
+        android:text="@string/label_redeem_coupon"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/couponsTabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/couponsTabs"
+        style="@style/CustomTabStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/back_black"
+        app:layout_constraintBottom_toTopOf="@+id/vpCoupon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btRedeemCoupon"
+        app:tabTextColor="@color/tab_text_grey" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/couponsTabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/couponsTabs" />
+</androidx.constraintlayout.widget.ConstraintLayout>

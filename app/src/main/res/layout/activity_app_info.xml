@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    tools:context=".activity.AppInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/infoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_30"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center"
+            android:textColor="@color/lt_pink"
+            android:textSize="25sp"
+            tools:text="Info Title" />
+
+        <TextView
+            android:id="@+id/infoDescription"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_30"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="@string/starting_from"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/infoImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150"
+            android:layout_margin="@dimen/dp_30"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/weak_connection" />
+
+        <Button
+            android:id="@+id/infoBtn"
+            style="@style/TitleSemiBoldStyle"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_accent"
+            android:layout_margin="@dimen/dp_30"
+            android:minHeight="@dimen/dp_40"
+            android:text="@string/retry"
+            android:textColor="@color/white"
+            tools:text="Retry"
+            tools:textColor="@color/white"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

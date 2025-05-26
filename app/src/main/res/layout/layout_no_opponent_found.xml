@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlNoOpponentFound"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/llPlaySinglePlayerGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dp_50"
+        android:paddingStart="@dimen/dp_50">
+
+        <TextView
+            style="@style/TitleSemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/no_opponent_found"
+            android:textColor="@color/lt_pink"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:id="@+id/ivWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_50"
+            android:contentDescription="@string/label_search"
+            android:src="@drawable/warning" />
+
+        <TableLayout
+            android:id="@+id/tblLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/trRow1"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btRetry"
+                    style="@style/Body_2_SemiBoldStyle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_tab_gray_radius_2"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableTop="@drawable/replay"
+                    android:gravity="center"
+                    android:onClick="cancelGame"
+                    android:paddingBottom="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_20"
+                    android:text="@string/retry"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/btPlaySolo"
+                    style="@style/Body_2_SemiBoldStyle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_tab_gray_radius_2"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableTop="@drawable/next_game"
+                    android:gravity="center"
+                    android:onClick="singlePlayerGame"
+                    android:paddingBottom="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_20"
+                    android:text="@string/play_solo"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

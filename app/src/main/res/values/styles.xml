@@ -1,0 +1,652 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <!-- <item name="android:windowFullscreen" tools:tragetApi="10">true</item>
+         <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="o_mr1">true</item>
+         <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="o_mr1">true</item>-->
+        <item name="android:statusBarColor">@color/tab_grey</item>
+
+    </style>
+
+    <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/black_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/black_transparent</item>
+        <item name="android:windowAnimationStyle">@style/CoinActivityAnimation.Window</item>
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+        <item name="android:actionMenuTextColor">@color/colorWhite</item>
+    </style>
+
+    <!-- Animations -->
+    <style name="CoinActivityAnimation" />
+
+    <!-- Animations for a non-full-screen window or activity. -->
+    <style name="CoinActivityAnimation.Window" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/coins_activity_transition_in</item>
+        <item name="android:windowExitAnimation">@anim/coins_activity_transition_out</item>
+    </style>
+
+    <style name="ActivityWithToolbarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/tab_grey</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/tab_text_grey</item>
+        <item name="android:windowBackground">@color/tab_grey</item>
+        <item name="drawerArrowStyle">@style/DrawerHamburgerStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="ThemeToolbarDarkOverflow" parent="Theme.AppCompat.NoActionBar">
+        <!-- android:textColorPrimary is the  color of the title text
+             in the Toolbar, in the Theme.AppCompat theme:  -->
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+
+        <!-- android:textColorPrimaryInverse is the  color of the title
+             text in the Toolbar, in the Theme.AppCompat.Light theme:  -->
+        <!-- <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item> -->
+
+        <!-- android:actionMenuTextColor is the color of the text of
+              action (menu) items in the Toolbar, at least in the
+              Theme.AppCompat theme.
+              For some reason, they already get the textColorPrimary
+              when running on API 21, but not on older versions of
+              Android, so this is only necessary to support older
+              Android versions.-->
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+        <!-- android:textColorSecondary is the color of the menu
+             overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+
+        <!-- This would set the toolbar's background color,
+              but setting this also changes the popup menu's background,
+              even if we define popupTheme for our <Toolbar> -->
+        <!-- <item name="android:background">@color/color_primary</item> -->
+    </style>
+    <!-- <style name="ActivityWithToolbarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+         &lt;!&ndash; Customize your theme here. &ndash;&gt;
+         <item name="colorPrimary">@android:color/white</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/colorAccent</item>
+         <item name="android:windowBackground">@color/windowBackground</item>
+         <item name="drawerArrowStyle">@style/DrawerHamburgerStyle</item>
+     </style>-->
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="HeaderStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="HeaderXXLBoldStyle">
+        <item name="android:textSize">@dimen/sp_28</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="HeaderXLBoldStyle">
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="HeaderBigBoldStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="CommentUserInfoTextStyle">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="CommentContentTextStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="EditTextLabelStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="HeaderBoldStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="ExpandedCollapsetoolbar">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="CollapsedCollapsetoolbar">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Header_2_MediumStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="Header_2_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Header_1_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Header_1_MediumStyle">
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="HeaderSemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="HeaderMediumStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="HeaderRegularStyleRent">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="HeaderRegularStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="TitleBoldStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="TitleSemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="TitleMediumStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TitleRegularStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="Subtitle_1_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Subtitle_1_MediumStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="Subtitle_1_RegularStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="Subtitle_2_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Subtitle_2_MediumStyle">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="Subtitle_2_RegularStyle">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="Body_1_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Body_1_MediumStyle">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="Body_1_RegularStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="Body_2_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Body_2_RegularStyle">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="Body_2_MediumStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="Body_3_SemiBoldStyle">
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="Body_3_RegularStyle">
+        <item name="android:textSize">@dimen/sp_6</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="CustomSeparator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:background">@color/colorLightGray</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="CheckboxStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/check_selector</item>
+        <item name="android:paddingBottom">@dimen/dp_20</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/back_black</item>
+    </style>
+
+    <style name="AppButtonStyle">
+        <item name="android:minHeight">@dimen/dp_35</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="QuestionButtonStyle">
+        <item name="android:minHeight">@dimen/dp_35</item>
+        <item name="android:background">@drawable/bg_lightgray</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextViewToolbarActionStyle">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="CustomTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="tabIndicatorHeight">@dimen/dp_2</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tabSelectedTextColor">@color/light_blue</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+    </style>
+
+    <style name="SimpleTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="android:theme">@style/Body_1_MediumStyle</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">@dimen/dp_2</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+    </style>
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+    </style>
+
+    <style name="HomeTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/HomeTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+    </style>
+
+    <style name="TvTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+        <item name="tabBackground">@drawable/highlight_tab_selector</item>
+        <item name="android:theme">@style/HeaderSemiBoldStyle</item>
+        <item name="android:focusable">false</item>
+        <item name="focusOutEnd">false</item>
+        <item name="focusOutFront">false</item>
+        <item name="focusOutSideStart">false</item>
+        <item name="focusOutSideEnd">false</item>
+    </style>
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/tab_text_grey</item>
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="HomeTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="CustomTabStyle1" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorColor">@color/light_blue</item>
+        <item name="tabIndicatorHeight">@dimen/dp_2</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tabSelectedTextColor">@color/light_blue</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+    </style>
+
+    <style name="CustomTabStyle2" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabIndicatorColor">@color/light_blue</item>
+        <item name="tabIndicatorHeight">@dimen/dp_2</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tabSelectedTextColor">@color/light_blue</item>
+        <item name="android:elevation">@dimen/dp_3</item>
+        <item name="android:theme">@style/HeaderSemiBoldStyle</item>
+    </style>
+
+    <style name="CustomTabTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/dp_2_5</item>
+        <item name="android:layout_marginBottom">@dimen/dp_2_5</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
+        <item name="android:paddingBottom">@dimen/dp_10</item>
+        <item name="android:textColor">@color/tab_text_grey</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/button_tab</item>
+        <item name="android:theme">@style/Body_1_SemiBoldStyle</item>
+    </style>
+
+    <!-- <style name="CustomTabStyle" parent="Widget.Design.TabLayout">
+         <item name="tabGravity">fill</item>
+         <item name="tabMode">fixed</item>
+         <item name="tabIndicatorColor">@color/colorAccent</item>
+         <item name="tabIndicatorHeight">@dimen/dp_2</item>
+         <item name="tabSelectedTextColor">@color/colorAccent</item>
+         <item name="android:background">@android:color/white</item>
+         <item name="android:elevation">@dimen/dp_3</item>
+     </style>
+
+     <style name="CustomTabTextViewStyle">
+         <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:layout_gravity">center_horizontal</item>
+         <item name="android:drawablePadding">@dimen/dp_10</item>
+         <item name="android:textColor">@color/colorBlack</item>
+         <item name="android:textAllCaps">true</item>
+         <item name="android:theme">@style/Body_1_SemiBoldStyle</item>
+     </style>-->
+
+    <style name="OtpEditTextStyle">
+        <item name="android:layout_width">@dimen/dp_40</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_tab_gray_color</item>
+        <item name="android:inputType">number</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorBottomMenuGray</item>
+    </style>
+
+    <style name="BottomNavigationViewbold" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <!--New Setting-->
+    <!--<style name="BottomViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/Widget.BottomNavigationView</item>
+        <item name="android:layout_marginStart">@dimen/dp_0</item>
+        <item name="android:layout_marginEnd">@dimen/dp_0</item>
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="itemIconTint">@color/bottom_tab_icon_color</item>
+        <item name="itemTextColor">@color/bottom_tab_icon_color</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>-->
+
+    <style name="BottomViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_0</item>
+        <item name="android:layout_marginEnd">@dimen/dp_0</item>
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="itemBackground">@color/tab_grey</item>
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="DrawerHamburgerStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="ProgressCoin" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/colorCoin</item>
+    </style>
+
+    <!--https://www.creativefreedom.co.uk/icon-designers-blog/android-4-1-icon-size-guide-made-simple/-->
+
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/spin_in</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+    <style name="TransparentToolbarTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="DialogBlack" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/alertGrayButtonColor</item>
+        <item name="android:background">@color/back_black</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Gets rid of the search icon -->
+        <item name="searchIcon">@drawable/ic_search</item>
+        <!-- Gets rid of the "underline" in the text -->
+        <item name="queryBackground">@color/white</item>
+        <!-- Gets rid of the search icon when the SearchView is expanded -->
+        <item name="searchHintIcon">@null</item>
+        <!-- The hint text that appears when the user has not typed anything -->
+        <item name="queryHint">@string/search_hint</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="FireworksThumbStyle">
+        <item name="android:radius">4dp</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textColor">@color/newColorText</item>
+        <item name="android:textSize">14sp</item>
+        <!--<item name="android:maxLines">2</item>-->
+        <item name="android:lines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="ImageStyle">
+        <item name="android:radius">12dp</item>
+    </style>
+
+    <style name="CustomFragImageStyle">
+        <item name="android:radius">@dimen/dp_6</item>
+    </style>
+
+    <style name="FireworkFragText">
+        <item name="android:textColor">@color/newColorText</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">2</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="CloseButtonStyle">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <!--<item name="android:padding">@dimen/padding_16</item>
+        <item name="srcCompat">@drawable/close_x</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen" parent="@style/AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <!--<style name="TrackSelectionDialogThemeOverlay" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+    </style>-->
+
+    <style name="TrackSelectionDialogThemeOverlay" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="windowNoTitle">false</item>
+    </style>
+
+</resources>

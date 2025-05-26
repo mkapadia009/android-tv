@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_black">
+
+    <RelativeLayout
+        android:id="@+id/mediaPlayerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btPlayGame"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:background="@android:color/transparent"
+            android:drawablePadding="@dimen/dp_10"
+            android:foreground="@drawable/ic_play"
+            android:foregroundTint="@color/colorAccent"
+            android:minHeight="@dimen/dp_40"
+            android:onClick="openFullscreenQuestionDialog"
+            android:padding="@dimen/dp_20"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute"
+            tools:visibility="gone" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/mediaPlayerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/mediaPlayerTimeBar"
+            android:background="@color/back_black"
+            app:controller_layout_id="@layout/layout_media_controller"
+            app:resize_mode="fit"
+            app:show_timeout="5000" />
+
+        <ImageView
+            android:id="@+id/ivAd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_black"
+            android:src="@drawable/esportsimage"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/adInfoLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@color/black_transparent"
+            android:fontFamily="@font/rubik_regular"
+            android:padding="@dimen/dp_4"
+            android:shadowColor="@color/colorBlack"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="8"
+            android:text="@string/advertisement"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSkipAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/adPlayerProgressBar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@color/black_transparent"
+            android:fontFamily="@font/rubik_regular"
+            android:padding="@dimen/dp_4"
+            android:shadowColor="@color/colorBlack"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="8"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+        <!--android:layout_marginBottom="-14dp"-->
+
+        <ProgressBar
+            android:id="@+id/adPlayerProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:progressTint="@color/colorYellow"
+            android:secondaryProgressTint="@color/colorYellowDarker"
+            android:visibility="gone"
+            tools:max="100"
+            tools:progress="20"
+            tools:secondaryProgress="50"
+            tools:visibility="visible" />
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@+id/mediaPlayerTimeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/back_black"
+            android:paddingLeft="-8dp"
+            android:paddingRight="-8dp"
+            android:visibility="visible"
+            app:ad_marker_color="@color/colorYellow"
+            app:ad_marker_width="@dimen/dp_5"
+            app:bar_height="@dimen/dp_3"
+            app:buffered_color="@color/colorGray"
+            app:played_ad_marker_color="@color/colorYellowDarker"
+            app:played_color="@color/colorAccent"
+            app:scrubber_color="@color/colorAccent" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verticalMediaPlayerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/verticalMediaPlayerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_black"
+            app:controller_layout_id="@layout/layout_vertical_media_controller"
+            app:resize_mode="fit"
+            app:show_timeout="5000" />
+
+        <Button
+            android:id="@+id/mediaPlayerRewind"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/full_transparent"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/mediaPlayerFForward"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/full_transparent"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVideoTitle"
+            style="@style/HeaderSemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/tvVideoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Santa Banta"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvVideoDescription"
+            style="@style/Subtitle_1_RegularStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Santa Banta"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="setLikeMusic"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/tvLike"
+                style="@style/Body_2_MediumStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6.8k"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/comment"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                style="@style/Body_2_MediumStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="102 k"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="shareData"
+                android:src="@drawable/ic_share"
+                android:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/tvAddtoWatchlist"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="addToWatchList"
+                android:src="@drawable/ic_add_white" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/verticalPlayerProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:progressTint="@color/white"
+            android:secondaryProgressTint="@color/colorGray"
+            tools:max="100"
+            tools:progress="20"
+            tools:secondaryProgress="50"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <!--<TextView
+            android:id="@+id/tab"
+            style="@style/CustomTabTextViewStyle" />-->
+
+    <TextView
+        android:id="@+id/tab1"
+        style="@style/TitleMediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_watch"
+        android:gravity="center_horizontal|top"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/label_free"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+    <TextView
+        android:id="@+id/tab2"
+        style="@style/TitleMediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_play"
+        android:gravity="center_horizontal|top"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/label_play"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+    <TextView
+        android:id="@+id/tab3"
+        style="@style/TitleMediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_premium"
+        android:gravity="center_horizontal|top"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/label_premium"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+</LinearLayout>

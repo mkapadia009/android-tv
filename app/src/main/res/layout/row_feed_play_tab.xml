@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvParent"
+    android:layout_width="@dimen/dp_0"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_0"
+    android:layout_marginTop="@dimen/dp_5"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:background="@color/back_black"
+    app:cardCornerRadius="@dimen/dp_4"
+    app:cardElevation="@dimen/dp_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_grey">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFeedImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/colorDarkGray"
+            app:cardCornerRadius="@dimen/dp_0"
+            app:cardElevation="@dimen/dp_0">
+
+            <ImageView
+                android:id="@+id/ivFeedImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_texts_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvFeedImage"
+            android:layout_alignStart="@+id/cvFeedImage"
+            android:layout_alignEnd="@+id/cvFeedImage"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvFeedTitle"
+                style="@style/Subtitle_2_SemiBoldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/colorWhite" />
+
+            <LinearLayout
+                android:id="@+id/llLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTvChannelName"
+                    style="@style/Body_2_MediumStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_channels"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@color/tab_text_grey" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Body_2_MediumStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/timer"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableTint="#b5b5b5"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="@color/tab_text_grey" />
+
+                    <TextView
+                        android:id="@+id/tvTimer"
+                        style="@style/Body_2_MediumStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="@color/tab_text_grey" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTurnBasedSubtitle"
+                style="@style/Body_2_MediumStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/tab_text_grey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/btViewWinners"
+                style="@style/Subtitle_2_SemiBoldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/view_winners"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

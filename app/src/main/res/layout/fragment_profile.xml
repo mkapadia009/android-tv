@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back_black"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_20">
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginTop="@dimen/dp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUserImage"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:src="@drawable/user"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/dp_2" />
+
+                <ImageView
+                    android:id="@+id/ivEditImage"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_edit_image" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvlabelName"
+                style="@style/Subtitle_1_MediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:text="@string/label_name"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlImage" />
+
+            <EditText
+                android:id="@+id/etname"
+                style="@style/HeaderRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/bg_black"
+                android:ems="0"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvlabelName" />
+
+
+            <TextView
+                android:id="@+id/tvlabelMobile"
+                style="@style/Subtitle_1_MediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_mobile_number"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etname" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                style="@style/HeaderRegularStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="TextView"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvlabelMobile" />
+
+
+            <ImageView
+                android:id="@+id/ivEditMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMobile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvMobile" />
+
+            <!-- <LinearLayout
+                 android:id="@+id/llbtsave"
+                 android:layout_width="@dimen/dp_200"
+                 android:layout_height="@dimen/dp_40"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginEnd="8dp"
+                 android:layout_marginStart="8dp"
+                 android:layout_marginTop="@dimen/dp_50"
+                 android:orientation="vertical"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/tvEmail">
+
+                 <Button
+                     android:id="@+id/btSave"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_margin="@dimen/dp_2"
+                     android:background="@color/tab_grey"
+                     android:text="@string/label_save"
+                     android:textColor="@color/colorWhite" />
+             </LinearLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

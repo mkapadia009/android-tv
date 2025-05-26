@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verticalPlayerControllerLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <ImageButton
+            android:id="@id/exo_play"
+            style="@style/ExoMediaButton.Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@null"
+            android:src="@drawable/play_icon_large" />
+
+        <ImageButton
+            android:id="@id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@null"
+            android:src="@drawable/player_icon_pause"
+            android:tint="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <!-- <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/rlTime"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="@dimen/dp_12"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:id="@id/exo_position"
+                 style="@style/Body_2_MediumStyle"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                 android:layout_marginStart="@dimen/dp_8"
+                 android:layout_marginBottom="@dimen/dp_5"
+                 android:padding="@dimen/dp_4"
+                 android:textColor="@android:color/white"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 tools:text="00:29" />
+
+             <TextView
+                 android:id="@id/exo_duration"
+                 style="@style/Body_2_MediumStyle"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginEnd="@dimen/dp_8"
+                 android:layout_marginBottom="@dimen/dp_5"
+                 android:padding="@dimen/dp_4"
+                 android:textColor="@android:color/white"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 tools:ignore="RelativeOverlap"
+                 tools:text="00:20" />
+
+             <com.google.android.exoplayer2.ui.DefaultTimeBar
+                 android:id="@id/exo_progress"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                 android:layout_marginEnd="@dimen/dp_8"
+                 android:visibility="invisible"
+                 app:bar_height="@dimen/dp_2"
+                 app:buffered_color="@color/colorGray"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@id/exo_duration"
+                 app:layout_constraintStart_toEndOf="@id/exo_position"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:played_color="@color/colorAccent"
+                 app:scrubber_color="@color/colorAccent" />
+
+         </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </LinearLayout>
+
+</RelativeLayout>

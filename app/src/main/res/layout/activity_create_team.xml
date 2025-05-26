@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".activity.CreateTeamActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_leader_freefire_uid" />
+
+        <EditText
+            android:id="@+id/etLeaderUID"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionDone"
+            android:minHeight="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/team_name" />
+
+        <EditText
+            android:id="@+id/etTeamName"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionDone"
+            android:minHeight="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/team_leader_name" />
+
+        <EditText
+            android:id="@+id/etLeaderName"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionDone"
+            android:minHeight="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/team_leader_phone_number_linked_to_whatsapp" />
+
+        <EditText
+            android:id="@+id/etLeaderMobileNumber"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:minHeight="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btCreateTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_team"
+            android:textSize="@dimen/sp_17"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="@color/colorYellow"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/bg_button"/>
+
+        <!--payment option-->
+        <LinearLayout
+            android:id="@+id/llPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/bg_tab_gray_color"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_20"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TitleMediumStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_select_your_payment_option"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/rlPayTm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="@dimen/dp_4"
+                    app:cardElevation="@dimen/dp_2">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp_2"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/paytm_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/TitleMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_toEndOf="@+id/cvImage"
+                    android:text="@string/paytm_desc_label"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRazorPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvImageRazorPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="@dimen/dp_4"
+                    app:cardElevation="@dimen/dp_2">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp_2"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/razorpay_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/TitleMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_toEndOf="@+id/cvImageRazorPay"
+                    android:text="@string/razorpay_desc_label"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCoinsPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCoinsPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="@dimen/dp_4"
+                    app:cardElevation="@dimen/dp_2">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp_2"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/coin_toolbar" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvCoins"
+                    style="@style/TitleMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_toEndOf="@+id/cvCoinsPay"
+                    android:text="@string/coins"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/open_nav_CL"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_nav_bg_open"
+    android:focusable="false"
+    android:padding="15dp">
+
+   <!-- <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/live_IB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/highlight_selector"
+        android:focusable="true"
+        android:nextFocusLeft="@id/live_IB"
+        android:nextFocusRight="@id/notification_button"
+        android:nextFocusUp="@id/live_IB"
+        android:nextFocusDown="@id/search_IB"
+        android:scaleType="centerCrop"
+        android:tag="@string/live"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_live" />-->
+
+    <include
+        android:id="@+id/notification_button"
+        layout="@layout/view_menu_icon_notification"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:nextFocusLeft="@id/notification_button"
+        android:nextFocusRight="@id/notification_button"
+        android:nextFocusUp="@id/notification_button"
+        android:nextFocusDown="@id/search_IB"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_Tv"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/user"
+        android:visibility="gone"
+        app:civ_border="true"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification_button" />
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        style="@style/HeaderSemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/icoins_IB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_Tv" />
+
+    <TextView
+        android:id="@+id/icoins_IB"
+        style="@style/Body_1_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:drawableStart="@drawable/ic_coin_smallest"
+        android:drawablePadding="@dimen/dp_5"
+        android:focusable="false"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:gravity="center"
+        android:textColor="#fddc02"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        tools:text="1500" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/search_IB"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/full_transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/search_IB"
+        android:nextFocusUp="@id/notification_button"
+        android:nextFocusDown="@id/movies_IB"
+        android:tag="@string/label_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/movies_IB"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/full_transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/movies_IB"
+        android:nextFocusUp="@id/search_IB"
+        android:nextFocusDown="@id/podcasts_IB"
+        android:tag="@string/label_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_IB"
+        app:srcCompat="@drawable/ic_home_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/podcasts_IB"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/full_transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/podcasts_IB"
+        android:nextFocusUp="@id/movies_IB"
+        android:nextFocusDown="@id/settings_IB"
+        android:tag="@string/label_premium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movies_IB"
+        app:srcCompat="@drawable/ic_premium_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/settings_IB"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/full_transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/settings_IB"
+        android:nextFocusUp="@id/podcasts_IB"
+        android:nextFocusDown="@id/settings_IB"
+        android:tag="@string/label_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/podcasts_IB"
+        app:srcCompat="@drawable/ic_more_unselected" />
+
+    <TextView
+        android:id="@+id/settings_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:text="@string/label_more"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/settings_IB"
+        app:layout_constraintStart_toEndOf="@id/settings_IB"
+        app:layout_constraintTop_toTopOf="@id/settings_IB" />
+
+    <TextView
+        android:id="@+id/podcasts_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:text="@string/label_premium"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/podcasts_IB"
+        app:layout_constraintStart_toEndOf="@id/podcasts_IB"
+        app:layout_constraintTop_toTopOf="@id/podcasts_IB" />
+
+    <TextView
+        android:id="@+id/movies_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:text="@string/label_home"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/movies_IB"
+        app:layout_constraintStart_toEndOf="@id/movies_IB"
+        app:layout_constraintTop_toTopOf="@id/movies_IB" />
+
+    <TextView
+        android:id="@+id/search_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/circular_std_medium_500"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/search_IB"
+        app:layout_constraintStart_toEndOf="@id/search_IB"
+        app:layout_constraintTop_toTopOf="@id/search_IB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

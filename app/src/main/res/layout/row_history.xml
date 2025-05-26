@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_black"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_15">
+
+    <TextView
+        android:id="@+id/tvStoreName"
+        style="@style/TitleSemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text="1000 coins"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/TitleRegularStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_3"
+        android:text="@string/text_earn_history_descr"
+        android:textColor="@color/colorWhite"/>
+</LinearLayout>

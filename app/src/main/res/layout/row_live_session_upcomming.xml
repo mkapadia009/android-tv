@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_upcomming"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/tab_grey"
+    app:cardCornerRadius="@dimen/dp_3"
+    app:cardElevation="@dimen/dp_5"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivImage"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <RelativeLayout
+                android:id="@+id/rvLiveSessionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivLive"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStoreName"
+                        style="@style/TitleSemiBoldStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:text=""
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        style="@style/Body_2_MediumStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                style="@style/Body_1_RegularStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:lines="4"
+                android:text=""
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/llAskAQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bg_accent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btAskAQuestion"
+                    style="@style/Subtitle_1_SemiBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableStart="@drawable/ic_question_mark"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:text="@string/label_ask_a_question"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRemindMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_accent"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/btRemindMe"
+                    style="@style/Subtitle_1_SemiBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableStart="@drawable/ic_notifications_white"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:text="@string/label_remind_me"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

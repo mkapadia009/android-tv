@@ -1,0 +1,270 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    dataBinding {
+        enabled = true
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        signingConfig {
+            storeFile file('iTapKeyStore.jks')
+            storePassword 'itap@infini'
+            keyAlias = 'iTap'
+            keyPassword 'itap@infini'
+        }
+    }
+
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.app.itaptv"
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode 3002
+        versionName "0.0.3"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
+        }
+        signingConfig signingConfigs.signingConfig
+    }
+
+    buildTypes {
+        debug {
+            //RAZOR PAY TEST KEY FOR DEBUG
+            resValue "string", "RAZORPAY_API_KEY", "rzp_test_3br2lS1aq5HKTX"
+            //resValue "string", "RAZORPAY_API_KEY", "rzp_live_ga3NQhpruLZ5M1"
+            //buildConfigField "String", 'BASE_URL', "\"https://itap.infini.work/\""
+            resValue "string", "app_name", "iTap"
+        }
+        /*demo {
+            //RAZOR PAY TEST KEY FOR DEBUG
+            resValue "string", "RAZORPAY_API_KEY", "rzp_test_EGU9EkaYWbU7yf"
+            resValue "string", "app_name", "ESKAY"
+            debuggable true
+        }*/
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signingConfig
+
+            //RAZOR PAY LIVE KEY FOR RELEASE
+            resValue "string", "RAZORPAY_API_KEY", "rzp_live_ga3NQhpruLZ5M1"
+            resValue "string", "app_name", "iTap"
+            //buildConfigField "String", 'BASE_URL', "\"https://itapuat.infini.work/\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
+        maven {
+            url "$storageUrl/download.flutter.io"
+        }
+        maven { url "https://github.com/wowTalkies-SDK/SDKWalletUtility/raw/testingbranch/repo" }
+    }
+    buildToolsVersion '28.0.3'
+    productFlavors {
+
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
+
+    //Support Libraries
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // Google + Firebase + Crashlytics
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+
+    // Recommended: Add the Google Analytics SDK.
+    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+    implementation 'com.google.android.gms:play-services-wallet:19.1.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.1.0'
+
+    // ExoPlayer
+    //implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.5'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.5'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.5'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.5'
+    implementation 'com.google.android.exoplayer:extension-ima:2.18.5'
+    implementation 'com.google.android.exoplayer:extension-mediasession:2.18.5'
+
+    // Networking + Image Loading + Others
+    //noinspection GradleDependency
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    //implementation 'androidx.media2:media2-widget:1.1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.1'
+    /*implementation ('com.github.bumptech.glide:glide:4.8.0'){
+                exclude group:'com.android.support'
+            }*/
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.github.markomilos:paginate:1.0.0'
+    implementation 'nl.dionsegijn:konfetti:1.3.2'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    //In-app update
+    implementation 'com.google.android.play:app-update:2.1.0'
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
+
+    // Scalable DP
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // KRecyclerView
+    implementation(name: 'KRecyclerAdapter', ext: 'aar')
+
+    // FireBase Notification
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+    // VAV and Required Dependencies
+    /*implementation('com.vav.cn:android-native-plugin-vavsdk-1.0.37-v2@aar') {
+        transitive = true
+    }*/
+
+    // Required for VAV
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    //implementation 'com.github.bumptech.glide:glide:4.7.1'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // TRILLBIT
+    //implementation 'sdk.trill.com:trill-sdk-release@aar'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.core:core:1.8.0'
+    implementation 'com.google.ar:core:1.34.0'
+
+    //  RAZORPAY
+    implementation 'com.razorpay:checkout:1.6.25'
+
+    // PAYTM
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.11'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+
+    // ROOM
+    implementation 'androidx.room:room-runtime:2.4.3'
+    annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    androidTestImplementation 'androidx.room:room-testing:2.4.3'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.5.1'
+
+    // OpenTok & Pusher Module
+    //implementation 'com.opentok.android:opentok-android-sdk:2.16.3'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    //implementation 'com.pusher:pusher-java-client:1.8.1'
+
+    //Youtube
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    //ImageUpload Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //FIREWORKS SDK
+    //implementation 'com.github.loopsocial:firework_sdk:v2.2.48x-iTap'
+    implementation 'com.amplitude:android-sdk:3.35.1'
+    implementation 'com.appsflyer:af-android-sdk:6.9.1'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
+    implementation 'androidx.fragment:fragment-ktx:1.5.4'
+
+    //Survey Monkey
+    implementation 'com.surveymonkey:surveymonkey-android-sdk:3.0.5'
+
+    //embedded YouTube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+
+    //rounded corners
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //refresh layout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    //AdMob SDK
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+
+    //3d model
+    //implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
+    //implementation 'com.google.ar.sceneform:assets:1.17.1'
+
+    //IndusOS
+    //implementation(name: 'Integrity-release-1.3', ext: 'aar')
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'androidx.browser:browser:1.4.0'
+
+    implementation 'com.bugfender.sdk:android:3.0.16'
+
+    implementation 'com.stripe:stripe-android:20.10.0'
+
+    // Trackier SDK
+    implementation 'com.trackier:android-sdk:1.6.33'
+
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation "androidx.leanback:leanback-tab:1.1.0-beta01"
+
+    implementation 'com.google.zxing:core:3.4.1'
+
+    //debugImplementation 'com.wowtplugin.plugincheck:flutter_debug:1.38'
+    //releaseImplementation 'com.wowtplugin.plugincheck:flutter_release:1.38'
+
+    //implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
+    implementation("com.github.bumptech.glide:glide:4.14.1") {
+        exclude group: "com.android.support"
+    }
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

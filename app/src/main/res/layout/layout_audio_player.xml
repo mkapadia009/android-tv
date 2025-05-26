@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlAudioPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:background="@drawable/bg_lightgray"
+    android:padding="@dimen/dp_15">
+
+    <RelativeLayout
+        android:id="@+id/rlAudioHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/Subtitle_2_MediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:drawableStart="@drawable/va_speaker"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="@string/audio_playing"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/Subtitle_1_SemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawableStart="@drawable/va_replay"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:onClick="replay"
+            android:text="@string/replay"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone"/>
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/playerProgressBar"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_15"
+        android:layout_below="@id/rlAudioHeader"
+        android:layout_marginTop="@dimen/dp_20"
+        android:progressBackgroundTint="@android:color/white"
+        android:progressTint="@color/colorAccent"
+        tools:progress="30" />
+
+    <RelativeLayout
+        android:id="@+id/rlDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerProgressBar">
+
+        <TextView
+            android:id="@+id/playerElapsedLbl"
+            style="@style/Subtitle_1_MediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:text="00:10"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/playerDurationLbl"
+            style="@style/Subtitle_1_MediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="00:15"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</RelativeLayout>

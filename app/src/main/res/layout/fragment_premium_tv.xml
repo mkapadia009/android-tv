@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/llprogressbar"
+            layout="@layout/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.leanback.tab.LeanbackTabLayout
+                android:id="@+id/tlHomeTabs"
+                style="@style/HomeTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:focusable="true"
+                android:background="@drawable/highlight_selector"
+                android:nextFocusLeft="@+id/tlHomeTabs"
+                android:nextFocusRight="@+id/tlHomeTabs"
+                android:nextFocusUp="@+id/tlHomeTabs"
+                android:nextFocusDown="@+id/view_pager"
+                android:visibility="gone"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabBackground="@drawable/highlight_selector"
+                app:tabPaddingEnd="@dimen/dp_3"
+                app:tabPaddingStart="@dimen/dp_3" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:id="@+id/llViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:focusable="false"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.leanback.tab.LeanbackViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@drawable/highlight_selector"
+                            android:focusable="false"
+                            android:nestedScrollingEnabled="true"
+                            android:nextFocusLeft="@+id/view_pager"
+                            android:nextFocusRight="@+id/view_pager"
+                            android:nextFocusUp="@+id/tlHomeTabs"
+                            android:nextFocusDown="@+id/container_list"
+                            android:visibility="gone"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                    <androidx.leanback.widget.VerticalGridView
+                        android:id="@+id/containerList"
+                        style="?attr/rowsVerticalGridStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="550dp"
+                        android:clipToPadding="false"
+                        android:scrollbars="none"
+                        app:focusOutEnd="false"
+                        app:focusOutFront="true"
+                        android:layout_marginLeft="-40dp"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

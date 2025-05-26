@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tabBackground">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tabBackground"
+        android:orientation="vertical"
+        tools:context=".activity.YoutubePlayerActivity">
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rlTopTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/back_black"
+            android:paddingBottom="@dimen/dp_20">
+
+            <LinearLayout
+                android:id="@+id/llPlayerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:id="@+id/tvStoreName"
+                    style="@style/TitleSemiBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/youtube"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLikeComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llPlayerTitle"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tvAddtoWatchlist"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_add_black"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/label_button_add_to_watchlist"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/tvLikeMusic"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_likes_fill"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:onClick="setLikeMusic"
+                    android:text="@string/label_button_like_no"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/tvCommentMusic"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_comment"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTint="@color/text_gray"
+                    android:gravity="center"
+                    android:onClick="setCommentMusic"
+                    android:text="@string/label_button_comment_no"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_share"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTint="@color/text_gray"
+                    android:gravity="center"
+                    android:onClick="shareData"
+                    android:text="@string/label_button_share"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/tvDownload"
+                    style="@style/Body_2_RegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_file_download_black"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/label_button_download_name"
+                    android:textColor="@color/text_gray"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--****************************** QUESTION LAYOUT *********************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMissedQuestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardElevation="@dimen/dp_3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tvMissedQuestions"
+                        style="@style/Body_1_MediumStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_coin"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="Tap here to answer 90 missed questions."
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-1dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/menu_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/flQuestionFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlQuestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_grey"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UselessParent">
+
+                    <include layout="@layout/row_question" />
+
+                    <include
+                        layout="@layout/loader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llQuestion"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/layout_question_right_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llQuestion"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/layout_question_wrong_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llQuestion"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/layout_question_won"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/llQuestion"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

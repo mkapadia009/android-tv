@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:background="@color/colorDarkGray">
+
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:background="@color/colorDarkGray"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/play_icon_large" />
+
+    <ImageButton
+        android:id="@+id/player_noti_close_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/ic_close"
+        android:tint="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_toEndOf="@id/thumbnailImageView"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/player_noti_title_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fontFamily="@font/rubik_regular"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            tools:text="Beautiful In White" />
+
+        <TextView
+            android:id="@+id/player_noti_sub_title_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player_noti_title_lbl"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fontFamily="@font/rubik_regular"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            tools:text="Shane Filan - Beautiful In White" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/thumbnailImageView"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/player_noti_prev_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:src="@drawable/exo_notification_previous"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/player_noti_play_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:src="@drawable/exo_notification_pause"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/player_noti_next_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:src="@drawable/exo_notification_next"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:padding="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLabelUsername"
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/username" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:minHeight="@dimen/dp_35"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvLabelPassword"
+            style="@style/EditTextLabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_tab_gray_color"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:minHeight="@dimen/dp_35"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btLogin"
+            style="@style/AppButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/bg_accent"
+            android:onClick="presenterSignIn"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

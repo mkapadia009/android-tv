@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body style='margin:0'>
+	<!--<video style='width:100%;height:100vh' data-setup='{"controls": false, "autoplay": true, "preload": "auto"}' id=example-video width=960 height=400 class="video-js vjs-default-skin" controls>
+	  <source
+		 src="load_my_string"
+		 type="application/x-mpegURL">
+	</video>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+    <script>
+      (function(window, videojs) {
+        var player = window.player = videojs('example-video');
+
+        // hook up the video switcher
+        var loadUrl = document.getElementById('load-url');
+        var url = document.getElementById('url');
+        loadUrl.addEventListener('submit', function(event) {
+          event.preventDefault();
+          player.src({
+            src: url.value,
+            type: 'application/x-mpegURL'
+          });
+          return false;
+        });
+      }(window, window.videojs));
+    </script>
+  </body>
+</html>

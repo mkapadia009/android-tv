@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:scrollbars="none"
+    tools:context="com.app.itaptv.fragment.MoreFragment"
+    tools:showIn="@layout/fragment_more">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10">
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginTop="@dimen/dp_20"
+                android:nextFocusRight="@id/tveditprofile"
+                android:nextFocusDown="@id/tveditprofile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civUser"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:src="@drawable/user"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/ivEditImage"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_edit_image" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rlImage"
+                app:layout_constraintTop_toTopOf="@+id/rlImage">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    style="@style/HeaderSemiBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_20" />
+
+                <TextView
+                    android:id="@+id/tvUserMobileNo"
+                    style="@style/HeaderRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:id="@+id/tveditprofile"
+                    style="@style/TitleMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableTint="@color/colorWhite"
+                    android:text="@string/label_edit_profile"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMoreMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:background="@color/back_black"
+            android:clipToPadding="false"
+            android:focusable="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="@dimen/dp_2"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_0"
+            tools:itemCount="4"
+            tools:listitem="@layout/row_more_menu" />
+
+        <TextView
+            android:id="@+id/versionTv"
+            style="@style/Subtitle_1_RegularStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:gravity="center"
+            android:textColor="@color/colorGray"
+            tools:text="@string/app_version" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

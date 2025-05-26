@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tab_grey"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TitleSemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/label_ask_a_question"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtitle"
+        style="@style/Body_2_MediumStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="start"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        style="@style/Body_2_MediumStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_110"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:ems="200"
+        android:gravity="start"
+        android:hint="@string/ask_question_hint"
+        android:inputType="textPersonName"
+        android:maxLength="200"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitle" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/Body_2_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:gravity="start"
+        android:text="@string/maxword"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/et_remark" />
+
+    <Button
+        android:id="@+id/btcancel"
+        style="@style/TitleSemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/tab_grey"
+        android:text="@string/label_cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/btsend"
+        app:layout_constraintEnd_toStartOf="@+id/btsend"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btsend"
+        style="@style/TitleSemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/tab_grey"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

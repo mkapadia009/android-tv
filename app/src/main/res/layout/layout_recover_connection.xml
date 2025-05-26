@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRecoverConnection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLabelRecovering"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center"
+            android:text="@string/recovering_connection"
+            android:textColor="@color/lt_pink"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvLabelWeakConnection"
+            style="@style/Header_2_MediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/opponent_s_connection_is_weak"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivWeakConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:contentDescription="@string/label_search"
+            android:src="@drawable/weak_connection" />
+
+
+        <Button
+            android:id="@+id/btExit"
+            style="@style/Body_2_SemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tab_gray_radius_2"
+            android:drawableTop="@drawable/exit"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:minWidth="@dimen/dp_150"
+            android:onClick="cancelGame"
+            android:paddingTop="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_25"
+            android:text="@string/exit"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/redeemTab"
+        style="@style/Subtitle_1_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_redeem_tab"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/label_redeem"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+    <TextView
+        android:id="@+id/earnTab"
+        style="@style/Subtitle_1_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_earn_tab"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/label_earn"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+    <TextView
+        android:id="@+id/walletTab"
+        style="@style/Subtitle_1_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_tab"
+        android:drawableStart="@drawable/ic_wallet_tab"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_8"
+        android:text="@string/wallet"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_text_grey" />
+
+</LinearLayout>

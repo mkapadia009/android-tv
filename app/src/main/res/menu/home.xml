@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/actionLive"
+        android:icon="@drawable/ic_live"
+        android:orderInCategory="1"
+        android:title="@string/label_live"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionCoins"
+        android:icon="@drawable/ic_coin"
+        android:orderInCategory="2"
+        android:title="@string/label_coins"
+        android:visible="true"
+        app:actionLayout="@layout/view_menu_icon_coins"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="3"
+        android:title="@string/label_search"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionNotification"
+        android:orderInCategory="4"
+        android:title="@string/label_notification"
+        android:visible="true"
+        app:actionLayout="@layout/view_menu_icon_notification"
+        app:showAsAction="always" />
+
+
+</menu>

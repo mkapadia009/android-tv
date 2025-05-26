@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRightAnswer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagebg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!--<TextView
+            android:id="@+id/tvLabelBingo"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dp_10"
+            android:fontFamily="@font/gooddp__"
+            android:text="@string/label_bingo"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24" />-->
+
+        <TextView
+            android:id="@+id/tv_cash_won"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="15"
+            android:textColor="@color/colorCoin"
+            android:textSize="@dimen/sp_15"
+            tools:text="@string/text_coin" />
+
+        <ImageView
+            android:id="@+id/iv_got_it"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cash_won"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/got_it" />
+    </RelativeLayout>
+</RelativeLayout>

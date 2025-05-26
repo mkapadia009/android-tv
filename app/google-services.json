@@ -1,0 +1,351 @@
+{
+  "project_info": {
+    "project_number": "4679721214",
+    "firebase_url": "https://itap-ecb2f.firebaseio.com",
+    "project_id": "itap-ecb2f",
+    "storage_bucket": "itap-ecb2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4679721214:android:6b324e5dcc35eca7",
+        "android_client_info": {
+          "package_name": "com.app.itap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4679721214-0rm5hkdl4g70pido4iqi0icv5cl8rkgn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "1d3faa633f80e1a11d2bf6106580ef11b87761a9"
+          }
+        },
+        {
+          "client_id": "4679721214-19tlh6g6cdkc7c59f9pjlrqc505anavk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "937aa962d408a62d4b3305117e606ce143014a08"
+          }
+        },
+        {
+          "client_id": "4679721214-235dk7b7d18a5pna7fdp1l9r927fo4do.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "d054e46dd1e02e3e7c0461f3711206c97157b415"
+          }
+        },
+        {
+          "client_id": "4679721214-944s2jr07m6te125l1tip5qnjrkumfjn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "47b0d9ceb7304d9c33785c4eb4bf8e49c240eda3"
+          }
+        },
+        {
+          "client_id": "4679721214-b7ldj260sq398f6gm2h72s6ssojj303q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "c526fd45d3e7379dc479145f286e0a1c99a875ef"
+          }
+        },
+        {
+          "client_id": "4679721214-cqcgskgph8v670r86gi6thqg25palbr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "a5d522b430e26612cfe79ff5c7a5a19a57b69faa"
+          }
+        },
+        {
+          "client_id": "4679721214-cutp62vatc9u5pko0iu5p93dtd85lo27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "82c30fdacdecc390ea165073d02dbdf719409269"
+          }
+        },
+        {
+          "client_id": "4679721214-epn5bdaki8mkr14hfkokj1tcph5tmhj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "d8c62bbb6044f9cd976e20b942cf41aea65ce0a7"
+          }
+        },
+        {
+          "client_id": "4679721214-g19mheb858ljskm314ru25kgsnftehpc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "d8fcf6c1a29568dcfadd51e90f6efeca615cebc4"
+          }
+        },
+        {
+          "client_id": "4679721214-i2iv1dgctjg2sr5iuqc5eibtlfmf5kvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "60b71c1d24fb234bf2bb896adda41a7b3396c1ab"
+          }
+        },
+        {
+          "client_id": "4679721214-o18ktbr32ulh5jifqmlvhe9v4jdkifjm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "207c78a66e783f07041859817d48f705fc2733f4"
+          }
+        },
+        {
+          "client_id": "4679721214-qur4im5m9q2otl31tcqcfo861b31rlb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itap",
+            "certificate_hash": "7328bacc680307d9f34748d0a402d3c81a92b8e0"
+          }
+        },
+        {
+          "client_id": "4679721214-b1c2cvbckt1i271c92p3vur374be16nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjY8sQ0G3xbYTYs_MQVg-PNG0fiW7mzGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4679721214-7pmv5jfbe0pf70qve7mt885ul79m75ek.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "4679721214-u4gbe8vqp1heab9b3ti0rkpv9g89po9b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.enter.itap"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4679721214:android:29ed6f5fb1c94c8962c5af",
+        "android_client_info": {
+          "package_name": "com.app.itaptv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4679721214-4b4tci6fk1baamuctiqt7g40h3m6scak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "937aa962d408a62d4b3305117e606ce143014a08"
+          }
+        },
+        {
+          "client_id": "4679721214-9fle57ege2i42edhqi16ivumds4iftdm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "7328bacc680307d9f34748d0a402d3c81a92b8e0"
+          }
+        },
+        {
+          "client_id": "4679721214-ad6qnsv2p4q20ne0hm5qgj6m23iv6673.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "60b71c1d24fb234bf2bb896adda41a7b3396c1ab"
+          }
+        },
+        {
+          "client_id": "4679721214-d3vgq8kgs1ajqusckb73ga79506hj3vk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "d8fcf6c1a29568dcfadd51e90f6efeca615cebc4"
+          }
+        },
+        {
+          "client_id": "4679721214-f5445s3ssbrtu11jsvdt7o22qeere9gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "207c78a66e783f07041859817d48f705fc2733f4"
+          }
+        },
+        {
+          "client_id": "4679721214-ikmia74pjo4amui8i3t26l1mnutao286.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "a5d522b430e26612cfe79ff5c7a5a19a57b69faa"
+          }
+        },
+        {
+          "client_id": "4679721214-jv3td8gt0nmmk3dsdaoq8uqjr6h77k19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "d054e46dd1e02e3e7c0461f3711206c97157b415"
+          }
+        },
+        {
+          "client_id": "4679721214-kh44bfdboh0poo9220mkubgot7ih0jrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "c526fd45d3e7379dc479145f286e0a1c99a875ef"
+          }
+        },
+        {
+          "client_id": "4679721214-kvrddfu7b6itbmh778d034t8ms8g5koi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "d8c62bbb6044f9cd976e20b942cf41aea65ce0a7"
+          }
+        },
+        {
+          "client_id": "4679721214-osgk90no56dbbmne512d5o6akljrmtqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "82c30fdacdecc390ea165073d02dbdf719409269"
+          }
+        },
+        {
+          "client_id": "4679721214-pdk1725idk1fppn4q9fhvlcqh3dbt50b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.itaptv",
+            "certificate_hash": "47b0d9ceb7304d9c33785c4eb4bf8e49c240eda3"
+          }
+        },
+        {
+          "client_id": "4679721214-b1c2cvbckt1i271c92p3vur374be16nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjY8sQ0G3xbYTYs_MQVg-PNG0fiW7mzGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4679721214-7pmv5jfbe0pf70qve7mt885ul79m75ek.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "4679721214-u4gbe8vqp1heab9b3ti0rkpv9g89po9b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.enter.itap"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4679721214:android:1590b91b6c5fe068",
+        "android_client_info": {
+          "package_name": "com.infini.itap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4679721214-07tfd6cjn4t416tdpo70qt3q54gd0cu4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "d054e46dd1e02e3e7c0461f3711206c97157b415"
+          }
+        },
+        {
+          "client_id": "4679721214-1g8di3m4b28lohaadd293hps15jp0k3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "5144e1021d29ebe0b89f0fa454ac4d6ba10933a0"
+          }
+        },
+        {
+          "client_id": "4679721214-5mqqvd1t5571u73fkcijqiil3e1vpfp4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "a5d522b430e26612cfe79ff5c7a5a19a57b69faa"
+          }
+        },
+        {
+          "client_id": "4679721214-9uqer0hiv86hrp36c8moba61jt3i6qba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "1d3faa633f80e1a11d2bf6106580ef11b87761a9"
+          }
+        },
+        {
+          "client_id": "4679721214-d99dqhc116imfam2olv62o8duhq08ijf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "b27ba915a0adb72f9c2ab18f3364c8a2b616072d"
+          }
+        },
+        {
+          "client_id": "4679721214-m0tafh4qo8oiu123752v9g1uspamepvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infini.itap",
+            "certificate_hash": "d8fcf6c1a29568dcfadd51e90f6efeca615cebc4"
+          }
+        },
+        {
+          "client_id": "4679721214-b1c2cvbckt1i271c92p3vur374be16nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjY8sQ0G3xbYTYs_MQVg-PNG0fiW7mzGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4679721214-7pmv5jfbe0pf70qve7mt885ul79m75ek.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "4679721214-u4gbe8vqp1heab9b3ti0rkpv9g89po9b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.enter.itap"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

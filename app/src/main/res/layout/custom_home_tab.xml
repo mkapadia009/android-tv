@@ -1,0 +1,14 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:minWidth="@dimen/dp_75"
+    android:padding="@dimen/dp_3"
+    android:textAllCaps="false"
+    android:textSize="@dimen/sp_15"
+    android:focusable="false"
+    android:background="@drawable/highlight_selector"
+    android:textColor="@color/white"
+    android:fontFamily="@font/rubik_regular"/>

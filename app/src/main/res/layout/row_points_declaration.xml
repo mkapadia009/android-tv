@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_black"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <TextView
+        android:id="@+id/pointsTitleTv"
+        style="@style/Body_1_SemiBoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkerGray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Successful SignUp" />
+
+    <TextView
+        android:id="@+id/iCoinsTv"
+        style="@style/Body_1_SemiBoldStyle"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_coin"
+        android:drawablePadding="@dimen/_5sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100 iCoins" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

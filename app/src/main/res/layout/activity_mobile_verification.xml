@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_black"
+    tools:context=".activity.MobileVerificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        tools:context="com.app.itaptv.activity.LoginActivity">
+
+        <Button
+            android:id="@+id/btnCheckout"
+            style="@style/HeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/checkout"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvLabelLogin"
+            style="@style/HeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/label_login"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:contentDescription="@null"
+            app:srcCompat="@mipmap/itap_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLabelMobileNumber"
+                style="@style/EditTextLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_mobile_number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:minHeight="@dimen/dp_35"
+                android:paddingStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_tab_gray_color">
+
+                <Spinner
+                    android:id="@+id/spinnerCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:dropDownVerticalOffset="40dp"
+                    android:dropDownWidth="@dimen/dp_100"
+                    android:backgroundTint="@color/white"/>
+                <EditText
+                    android:id="@+id/etMobileNumber"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:textColor="@color/colorAccent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvLabelOtp"
+                    style="@style/EditTextLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="@string/label_6_digit_otp" />
+
+                <LinearLayout
+                    android:id="@+id/llOtpDigits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etOtpDig1"
+                        style="@style/OtpEditTextStyle"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/etOtpDig2"
+                        style="@style/OtpEditTextStyle"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/etOtpDig3"
+                        style="@style/OtpEditTextStyle"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/etOtpDig4"
+                        style="@style/OtpEditTextStyle"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/etOtpDig5"
+                        style="@style/OtpEditTextStyle"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/etOtpDig6"
+                        style="@style/OtpEditTextStyle"
+                        android:imeOptions="actionDone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btSendOtp"
+                style="@style/AppButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@drawable/bg_accent"
+                android:text="@string/label_send_otp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btLetsGo"
+                style="@style/AppButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@drawable/bg_accent"
+                android:text="@string/label_lets_go"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvResendOtp"
+                    style="@style/Subtitle_1_MediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/label_resend_otp"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/bg_tab_gray_color"
+                android:padding="@dimen/dp_16">
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@null"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_downloads_empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:fontFamily="@font/rifficfree_bold"
+                    android:gravity="center"
+                    android:text="@string/downloads_primary_text_empty_state"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintStart_toEndOf="@id/ivIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="start"
+                    android:text="@string/downloads_fav_videos_login_desc"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

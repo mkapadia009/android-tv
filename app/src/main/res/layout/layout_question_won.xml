@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlShopnow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_plain" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tvLabelHurray"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dp_10"
+            android:fontFamily="@font/gooddp__"
+            android:text="@string/label_all_question"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <ImageButton
+            android:id="@+id/ibShopClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@android:color/transparent"
+            android:onClick="closeFullscreenQuestionDialog"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_close"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvWon"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLabelHurray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/rifficfree_bold"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="15"
+            android:text="@string/total_won"
+            android:textColor="@color/lt_pink"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:id="@+id/tvWonCoin"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:drawableStart="@drawable/coin_toolbar"
+            android:drawablePadding="@dimen/dp_5"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="15"
+            android:text="@string/text_coin"
+            android:textColor="@color/colorCoin"
+            android:textSize="@dimen/sp_22" />
+
+
+        <ImageView
+            android:id="@+id/ivshopnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWonCoin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:onClick="shopNow"
+            android:scaleType="centerCrop"
+            android:src="@drawable/button_redeem" />
+    </RelativeLayout>
+</RelativeLayout>

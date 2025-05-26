@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintPointsParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_black">
+
+    <TextView
+        android:id="@+id/pointHeaderTv"
+        style="@style/HeaderMediumStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/earn_frag_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pointsDeclarationRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pointHeaderTv"
+        tools:itemCount="3"
+        tools:listitem="@layout/row_points_declaration" />
+</androidx.constraintlayout.widget.ConstraintLayout>

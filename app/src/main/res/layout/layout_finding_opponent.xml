@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlFindingOpponents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_above="@+id/btCancel">
+
+        <TextView
+            android:id="@+id/tAvLabelFindOpponent_DownloadingData"
+            style="@style/TitleSemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/label_searching_opponent"
+            android:textColor="@color/lt_pink"
+            android:textSize="23sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tAvLabelFindOpponent_DownloadingData"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/ivSearch_Download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/label_search"
+                android:src="@drawable/opponent_search" />
+        </RelativeLayout>
+
+        <!--<ImageView
+            android:id="@+id/ivSearch_Download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:contentDescription="@string/label_search"
+            android:src="@drawable/opponent_search"/>-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCancel"
+        style="@style/Subtitle_1_MediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_lightgray"
+        android:minHeight="@dimen/dp_35"
+        android:minWidth="@dimen/dp_150"
+        android:onClick="cancelGame"
+        android:text="@string/label_cancel"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

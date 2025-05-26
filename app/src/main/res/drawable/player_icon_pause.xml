@@ -1,0 +1,8 @@
+<!-- drawable/pause.xml --> <!--color Accent-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="54dp"
+    android:width="54dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path android:fillColor="#ff145c" android:pathData="M14,19H18V5H14M6,19H10V5H6V19Z" />
+</vector>

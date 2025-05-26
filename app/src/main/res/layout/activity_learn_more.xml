@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:theme="@style/ActivityWithToolbarTheme"
+    tools:context=".activity.LearnMoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_black" />
+
+        <ImageView
+            android:id="@+id/iTapLogoWithText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/itap_logo_with_name" />
+
+        <RelativeLayout
+            android:id="@+id/rIconsParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_audio"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_toStartOf="@+id/iv_stop"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/audio" />
+
+            <ImageView
+                android:id="@+id/iv_stop"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_stop" />
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_toEndOf="@+id/iv_stop"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plays" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_itapcoin"
+            style="@style/HeaderMediumStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="@string/label_itapcoin"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_itapcoindesc"
+            style="@style/HeaderMediumStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/label_itapdesc"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/Subtitle_1_MediumStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_18"
+            android:textColor="@color/colorWhite"
+            tools:text="@string/offline_learn_more_content" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlCoinTabs"
+            style="@style/CustomTabStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/back_black"
+            android:visibility="gone"
+            app:layout_collapseMode="pin"
+            app:tabTextColor="@color/tab_text_grey" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpCoin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

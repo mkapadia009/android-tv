@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sheet_back"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    style="@style/HeaderBigBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_18"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Police Story 2" />
+
+                <ImageView
+                    android:id="@+id/watchIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dp_20"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_3"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/itap_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+                <TextView
+                    android:id="@+id/tvWatchNow"
+                    style="@style/Header_2_SemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dp_20"
+                    android:layout_marginEnd="245dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/downloads_watch_now"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/watchIv"
+                    app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+                <ImageView
+                    android:id="@+id/deleteIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dp_20"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_3"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_delete_download"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/watchIv" />
+
+                <TextView
+                    android:id="@+id/tvDelete"
+                    style="@style/Header_2_SemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dp_20"
+                    android:layout_marginEnd="232dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/downloads_delete_video"
+                    android:textColor="@color/text_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/deleteIv"
+                    app:layout_constraintTop_toBottomOf="@id/watchIv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

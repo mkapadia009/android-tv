@@ -1,0 +1,38 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlWrongAnswer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLabelOops"
+            style="@style/HeaderBoldStyle"
+            android:fontFamily="@font/gooddp__"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/label_oops"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:drawableTop="@drawable/wrong_answer"
+            android:drawablePadding="@dimen/dp_5" />
+
+        <TextView
+            style="@style/HeaderBoldStyle"
+            android:fontFamily="@font/rifficfree_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/label_wrong_answer"
+            android:textColor="@color/lt_pink"
+            android:textSize="32sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subscriptionsParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activity.SubscriptionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/itapLogoIv"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:contentDescription="@null"
+                android:src="@mipmap/itap_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/offlineTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:fontFamily="@font/rifficfree_bold"
+                android:text="@string/offline_premium"
+                android:textColor="@color/colorwalletcoin"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintBottom_toTopOf="@id/offlineDescTv"
+                app:layout_constraintStart_toEndOf="@id/itapLogoIv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/offlineDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:text="@string/download_and_watch"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/offlineTitleTv"
+                app:layout_constraintTop_toBottomOf="@id/offlineTitleTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/offersIv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            tools:src="@mipmap/subs_offer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pointersConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/descTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_tick"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:text="@string/download_and_watch"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_tick"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/save_mobile_internet_data"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@id/descTv1"
+                app:layout_constraintTop_toBottomOf="@id/descTv1" />
+
+            <TextView
+                android:id="@+id/descTv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_tick"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/watch_anywhere"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@id/descTv2"
+                app:layout_constraintTop_toBottomOf="@id/descTv2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/startingFromtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="@string/starting_from"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/perMonthTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center"
+            android:text="@string/min_sub_amount_default"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/buyNowBtn"
+            android:layout_width="170dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_buy_now" />
+
+        <ImageButton
+            android:id="@+id/learnMoreBtn"
+            android:layout_width="170dp"
+            android:layout_height="@dimen/dp_50"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_learn_more_button" />
+
+        <TextView
+            android:id="@+id/tvLabelTermsNPolicyLine1"
+            style="@style/Subtitle_2_MediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:singleLine="true"
+            android:text="@string/subject_to_tc"
+            android:textColor="@color/colorLightGray"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

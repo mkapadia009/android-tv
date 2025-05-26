@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black"
+    android:orientation="vertical"
+    android:theme="@style/ActivityWithToolbarTheme"
+    tools:context="com.app.itaptv.activity.LanguagePrefActivity">
+
+    <include
+        android:id="@+id/emptyLayout"
+        layout="@layout/layout_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/progress_bar" />
+
+    <include layout="@layout/lang_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/llHeaderLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            style="@style/Subtitle_1_SemiBoldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_lang_pref_title_line1"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            style="@style/Subtitle_2_MediumStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="@string/label_lang_pref_title_line2"
+            android:textColor="@color/colorDarkerGray" />
+
+        <!-- <LinearLayout
+             android:id="@+id/llSeparator"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <View
+                 style="@style/CustomSeparator"
+                 android:layout_width="0dp"
+                 android:layout_weight="1" />
+         </LinearLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/back_black" />
+    </LinearLayout>
+</RelativeLayout>

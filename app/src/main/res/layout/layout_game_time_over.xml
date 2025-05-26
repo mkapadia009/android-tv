@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTimeOver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLabelSorry"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/timeout"
+            android:fontFamily="@font/gooddp__"
+            android:gravity="center_horizontal"
+            android:text="@string/label_sorry"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center"
+            android:text="@string/label_time_over"
+            android:textColor="@color/lt_pink"
+            android:textSize="35sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlDownloadingData"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_black">
+
+    <LinearLayout
+        android:id="@+id/llDownloadingData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvLabelDownloadingData"
+            style="@style/TitleSemiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rifficfree_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/downloading_game_data"
+            android:textColor="@color/lt_pink"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:src="@drawable/download" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvPercent"
+                style="@style/Header_2_SemiBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/download_percent"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                style="@style/Header_2_SemiBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/complete"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_20" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/downloadProgressBar"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="280dp"
+            android:layout_height="@dimen/dp_15"
+            android:layout_below="@id/rlAudioHeader"
+            android:layout_marginTop="@dimen/dp_20"
+            android:indeterminateOnly="true"
+            android:progressBackgroundTint="@android:color/white"
+            android:progressTint="@color/colorAccent"
+            android:scaleY="1.5" />
+    </LinearLayout>
+</RelativeLayout>

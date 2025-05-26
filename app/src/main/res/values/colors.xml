@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <!-- <color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FC155A</color>-->
+    <color name="colorAccent">#12AAF7</color>
+    <color name="windowBackground">#f5f5f5</color>
+    <color name="tabBackground">#2D3135</color>
+    <color name="alertGrayButtonColor">#606060</color>
+    <color name="borderGrayColor">#E8E8E8</color>
+    <color name="colorCoin">#FEA832</color>
+    <color name="colorRegister">#dcbf00</color>
+    <color name="colorFbBlue">#3c5a99</color>
+    <color name="colorGray">#9E9E9E</color>
+    <color name="colorLightGray">#DFDFDF</color>
+    <color name="colorDarkerGray">#8e8e8e</color>
+    <color name="colorBlack">#181D21</color>
+    <color name="colorDarkGray">#1e272e</color>
+    <color name="colorBottomMenuGray">#888888</color>
+    <color name="black_transparent">#95000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="newColorText">#bcbcbc</color>
+    <color name="light_red">#C32029</color>
+    <color name="dark_red">#952544</color>
+    <color name="bright_red">#BC212C</color>
+    <color name="red">#A70119</color>
+
+    <color name="btn_grad_start_red">#F54742</color>
+    <color name="btn_grad_end_red">#D12A27</color>
+
+    <!-- Confetti Colors -->
+    <!-- Light UI colors -->
+    <color name="lt_yellow">#fce18a</color>
+    <color name="lt_orange">#ff726d</color>
+    <color name="lt_purple">#b48def</color>
+    <color name="lt_pink">#f4306d</color>
+    <!-- Dark UI colors -->
+    <color name="dk_cyan">#3aaab8</color>
+    <color name="dk_green">#38ba9e</color>
+    <color name="dk_red">#bb3d72</color>
+    <color name="dk_blue">#006ded</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="colorYellow">#F7E832</color>
+    <color name="colorPurple">#741768</color>
+    <color name="colorLightPurple">#B60B98</color>
+    <color name="colorYellowDarker">#FDC954</color>
+    <color name="colorTimer">#37AB02</color>
+    <color name="colorwalletcoin">#FDDC02</color>
+
+
+    <!--New Colors-->
+    <!--<color name="back_black">#000000</color>-->
+    <color name="back_black">#0A1118</color>
+    <color name="transparent_back_black">#B7000000</color>
+    <color name="back_black_transparent">#EE000000</color>
+    <color name="black_back_transparent">#D4000000</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="tab_grey">#2d2d2d</color>
+    <color name="tab_text_grey">#b4b4b4</color>
+    <color name="light_blue">#12AAF7</color>
+    <color name="bottom_tab_icon_color">#b4b4b4</color>
+    <color name="button_gray">#454545</color>
+    <color name="text_gray">#888888</color>
+    <color name="sheet_back">#2E3336</color>
+    <color name="game_gray">#232323</color>
+
+
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="radio_button_unselected_color">#e0e0e0</color>
+
+    <color name="hjsd">#e0e0e0</color>
+    <color name="black">#000000</color>
+
+    <!-- Download Colors -->
+    <color name="download_purple">#FA0072</color>
+
+    <!--Firework-->
+    <color name="progress_bar_color">#12AAF7</color>
+
+    <color name="avatar_background">#13001f</color>
+    <color name="tab_selected">#F1E2FF</color>
+    <color name="bottom_menu">#8D6FA9</color>
+    <color name="bottom_menu_bg">#0F001D</color>
+    <color name="buy_now_bg">#FFE104</color>
+    <color name="card_bg">#E9E9E9</color>
+
+    <color name="app_background">#A9421C</color>
+
+</resources>

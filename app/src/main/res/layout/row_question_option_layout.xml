@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llOption"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_lightgray">
+
+    <Button
+        android:id="@+id/btOption"
+        style="@style/TitleMediumStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_2"
+        android:background="@drawable/bg_lightgray"
+        android:minHeight="@dimen/dp_35"
+        android:onClick="selectAnswer"
+        android:text="Diana Penty"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+</LinearLayout>

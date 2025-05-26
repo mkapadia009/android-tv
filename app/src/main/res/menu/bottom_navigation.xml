@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bNavHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/label_home"
+        app:showAsAction="ifRoom"/>
+
+    <!--<item
+        android:id="@+id/bNavChannels"
+        android:icon="@drawable/ic_channels"
+        android:title="@string/label_channels"
+        app:showAsAction="ifRoom" />-->
+
+    <!--<item
+        android:id="@+id/bNavVoucher1"
+        android:icon="@drawable/ic_action_vouchers"
+        android:title="@string/label_offers"
+        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/bNavShop"
+        android:icon="@drawable/ic_shop_icon"
+        android:title="@string/label_shop"
+        app:showAsAction="ifRoom" />
+
+    <!--<item
+        android:id="@+id/bNavPurchases"
+        android:icon="@drawable/ic_my_purchases"
+        android:title="@string/label_purchases"
+        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/bNavAvatar"
+        android:icon="@drawable/avatar"
+        android:title="@string/create"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bNavSubscribe"
+        android:icon="@drawable/icon_premium"
+        android:title="@string/label_premium"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bNavMore"
+        android:icon="@drawable/ic_more"
+        android:title="@string/label_more"
+        app:showAsAction="ifRoom" />
+
+</menu>

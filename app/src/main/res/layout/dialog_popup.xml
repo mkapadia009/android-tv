@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlPurchase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagebg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="15"
+            android:textColor="@color/colorCoin"
+            android:textSize="@dimen/sp_15"
+            tools:text="@string/text_coin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_message"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_negative"
+                style="@style/TitleSemiBoldStyle"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_button"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:text="@string/label_logout"
+                android:textColor="@color/colorYellow" />
+
+            <Button
+                android:id="@+id/bt_positive"
+                style="@style/TitleSemiBoldStyle"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/bt_positive"
+                android:background="@drawable/bg_button"
+                android:scaleType="centerInside"
+                android:text="@string/ok"
+                android:textColor="@color/colorYellow" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

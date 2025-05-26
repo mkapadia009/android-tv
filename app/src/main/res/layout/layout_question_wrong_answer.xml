@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlWrongAnswer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_plain" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tvLabelOops"
+            style="@style/HeaderBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dp_5"
+            android:fontFamily="@font/gooddp__"
+            android:text="@string/label_oops"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:id="@+id/tvLabelwrong"
+            style="@style/TitleBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLabelOops"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/rifficfree_bold"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="15"
+            android:text="@string/wrong_answer"
+            android:textAllCaps="true"
+            android:textColor="@color/lt_pink"
+            android:textSize="@dimen/sp_24" />
+
+        <ImageView
+            android:id="@+id/ivNextQuestionW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLabelwrong"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:onClick="tryAnotherQuestion"
+            android:scaleType="fitXY"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
+</RelativeLayout>

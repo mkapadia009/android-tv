@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_grey"
+    android:keepScreenOn="true">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Player score layout-->
+
+        <RelativeLayout
+            android:id="@+id/rlParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <!--****************** Game Ends In Layout ****************************-->
+            <LinearLayout
+                android:id="@+id/llEndsIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_black">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_2"
+                    android:background="@drawable/bg_black"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/dp_70"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llLeftEndsIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_18"
+                            android:layout_height="@dimen/dp_18"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:src="@drawable/timer" />
+
+                        <TextView
+                            style="@style/Header_1_MediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:gravity="center"
+                            android:text="@string/ends_in"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_20" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvGameTime"
+                        style="@style/Header_1_MediumStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="12:36"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cvFooterAd"
+                android:layout_below="@+id/llEndsIn">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--**********************QUESTION LAYOUT***************************-->
+
+                    <include
+                        layout="@layout/layout_game_question"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFooterAd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="@dimen/dp_4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--<include layout="@layout/custom_layer"
+        android:visibility="gone"/>-->
+
+    <!--**********************RIGHT ANSWER LAYOUT***************************-->
+
+    <include
+        layout="@layout/layout_game_right_answer"
+        android:visibility="gone" />
+
+    <!--**********************WRONG ANSWER LAYOUT***************************-->
+
+    <include
+        layout="@layout/layout_game_wrong_answer"
+        android:visibility="gone" />
+
+    <!--**********************TIME OVER LAYOUT***************************-->
+
+    <include
+        layout="@layout/layout_game_time_over"
+        android:visibility="gone" />
+</RelativeLayout>

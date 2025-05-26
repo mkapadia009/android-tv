@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.itaptv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--<uses-permission
+        android:name="android.permission.BROADCAST_SMS"
+        tools:ignore="ProtectedPermissions" />-->
+    <!--<uses-permission android:name="com.google.android.gms.permission.AD_ID" />-->
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.faketouch"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.nfc"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone"
+        android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor"
+        android:required="false"/>
+    <!-- Some TV devices have an ethernet connection only -->
+    <uses-feature android:name="android.hardware.wifi"
+        android:required="false"/>
+    <!--
+Indicates that this app requires Google Play Services for AR.
+    Limits app visibility in the Google Play Store to ARCore supported devices
+    -->
+    <!--<uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="false" />-->
+
+    <application
+        android:name="com.app.itaptv.MyApp"
+        android:allowBackup="false"
+        android:appComponentFactory="@string/app_name"
+        android:banner="@mipmap/ic_itap_tv_logo"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/itap_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/itap_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
+        tools:replace="android:appComponentFactory,android:allowBackup">
+        <activity
+            android:name="com.app.itaptv.activity.LanguageSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.SubscriptionSuccessActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.PremiumActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ProductDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.PurchasesActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.AvatarWebActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7640170572457882~6388607620" />
+        <!--
+ ARCore need to be installed, as the app does not include any non-AR features.
+     For an "AR Optional" app, specify "optional" instead of "required".
+        -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.ar.core.min_apk_version"
+            android:value="19"
+            tools:replace="android:value" />
+
+        <activity
+            android:name="com.app.itaptv.activity.MaintenanceActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.JoinTeamActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.CreateTeamActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.TournamentRegistrationFormActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.TournamentSummaryActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.AppUpdateActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.MobileVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.YouTubePlayerViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.app.itaptv.activity.MyCouponsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.AppInfoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.SubscriptionsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.OfflinePlayerActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.QuestionnaireActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.CouponRedemptionActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.FireworksTest"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.PastContestWinners"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GiveAwayActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.VerificationActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ReferralCoinsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ReferCodeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ReferAndEarnActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.vouchers.CouponsViewAllActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.vouchers.CouponsDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.vouchers.CouponsListingActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.MultiplayerCoinAlertActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <!--
+<activity
+            android:name=".activity.YoutubePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        -->
+        <activity
+            android:name="com.app.itaptv.activity.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <!--<receiver
+            android:name=".receiver.SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!--
+Trillbit
+        <meta-data
+            android:name="trill_sdk_secret"
+            android:value="@string/TRIL_SECRET" />
+        <meta-data
+            android:name="trill_sdk_key"
+            android:value="@string/TRIL_KEY" />
+        -->
+        <!--
+<service
+             android:name=".trillbit.TrillbitService"
+             android:exported="true" />
+         <service
+             android:name=".trillbit.TrillbitJobService"
+             android:exported="true"
+             android:permission="android.permission.BIND_JOB_SERVICE" />
+        -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/RAZORPAY_API_KEY" />
+
+        <activity
+            android:name="com.app.itaptv.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="www.itap.online" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.itaptv.activity.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.app.itaptv.activity.LanguagePrefActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.HomeActivity"
+            android:configChanges="screenSize|orientation|screenLayout|navigation|keyboard|keyboardHidden|uiMode|layoutDirection|smallestScreenSize"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="itap.online" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.itaptv.activity.LearnMoreActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.CoinsActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.BaseActivity"
+            android:configChanges="screenSize|orientation|screenLayout|navigation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameStartActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameSinglePlayerCountDownActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameOngoingActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameOngoingSinglePlayer"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameResultActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.WalletActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.RedeemCoinsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.itaptv.activity.HistoryActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.CouponDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <service android:name="com.app.itaptv.service.AudioPlayerService" />
+        <service
+            android:name="com.app.itaptv.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.app.itaptv.activity.GameOngoingLiveActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.GameLiveResultActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.LeaderBoardActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.BuyDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.itaptv.activity.LuckyWinnerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ViewMoreActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.HowToPlayActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.DurationActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+       <!-- <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.AppCompat" />-->
+        <activity
+            android:name="com.surveymonkey.surveymonkeyandroidsdk.SMFeedbackActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service
+            android:name="com.app.itaptv.notification.MyFireBaseInstanceIDService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.app.itaptv.notification.MyFireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+            <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="landscape" />
+        -->
+        <activity
+            android:name="com.app.itaptv.activity.TestActivity"
+            android:exported="false">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.app.itaptv.activity.GameActivity"
+            android:exported="false"
+            android:screenOrientation="landscape">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.app.itaptv.activity.BrowserActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.CommentListActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.MyWatchList"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.DownloadActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.TeaserActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <!--
+<activity
+            android:name=".activity.LoginPresenterActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PresenterLiveActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.LiveActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/live_activity_title"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PresenterLiveStartActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.LiveNowStartActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.LiveStreamActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="itap.online"
+                    android:pathPrefix="/share"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name="com.app.itaptv.activity.ViewAllLiveActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.ViewAllQuestionsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.app.itaptv.activity.PastStreamActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <!--<activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize" />-->
+        <activity
+            android:name="com.wowtalkies.arfeatures.FaceFilters.augmentedfaces.AugmentedFacesActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.wowtalkies.arfeatures.ArStickers.ArStickersActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.wowtalkies.main.ImageFullscreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.app.itaptv.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <service
+            android:name="com.app.itaptv.service.OfflineDownloadService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+    <queries>
+        <package android:name="com.google.ar.core" />
+    </queries>
+
+</manifest>

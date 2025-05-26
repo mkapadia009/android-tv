@@ -1,0 +1,923 @@
+<resources>
+    <!--<string name="app_name">iTap</string>-->
+    <string name="splash_app_name">iTAP</string>
+    <string name="splash_app_desc">Watch. Tap . Play. Win.</string>
+    <string name="label_login">Login</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_login_with_facebook">Login with Facebook</string>
+    <string name="label_login_with_google">Login with Google</string>
+    <string name="label_or">OR</string>
+    <string name="label_mobile_number">Mobile Number</string>
+    <string name="label_6_digit_otp">Verify OTP</string>
+    <string name="label_lets_go">Lets Go</string>
+    <string name="label_terms_n_policy">Terms &amp; Policy></string>
+    <string name="label_confirm_terms_n_policy">Please confirm that you accept the Terms of Use and Privacy Policy</string>
+    <string name="error_msg_enter_mobile_no">Please enter your mobile number</string>
+    <string name="label_error">Error</string>
+    <string name="label_alert">Alert</string>
+
+    <!-- Application Info Strings -->
+    <string name="label_app_update">Update App</string>
+    <string name="label_come_later">Come Later</string>
+
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="facebook_app_id">1970355783182108</string>
+    <string name="fb_login_protocol_scheme">fb1970355783182108</string>
+    <string name="server_client_id">4679721214-7pmv5jfbe0pf70qve7mt885ul79m75ek.apps.googleusercontent.com</string>
+    <!--<string name="server_client_id">425665268628-4vg9fmuonaqjcmiq7bod945vkatsq189.apps.googleusercontent.com</string>-->
+    <string name="label_lang_pref_title_line1">We have entertaining content in many languages</string>
+    <string name="label_lang_pref_title_line2">Pick all you want</string>
+    <string name="label_tick_answers">Please tick your answers below</string>
+    <string name="label_done">Done</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="label_welcome_to_itap">Welcome to iTap</string>
+    <string name="label_coins_in_wallet">You now have 50 coins in your wallet.</string>
+    <string name="label_referral_coins">Referral Bonus!</string>
+    <string name="label_got_it">Got It</string>
+    <string name="label_learn_more">Learn More</string>
+    <string name="label_home">Home</string>
+    <string name="label_channels">Channels</string>
+    <string name="label_search">Search</string>
+    <string name="label_upload">Upload</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_notification">Notification</string>
+    <string name="label_live">Live</string>
+    <string name="label_coins">Coins</string>
+    <string name="label_listen">Listen</string>
+    <string name="label_watch">Watch</string>
+    <string name="label_read">Read</string>
+    <string name="label_play">Play</string>
+    <string name="label_free">Free</string>
+    <string name="label_rent">Rent</string>
+    <string name="label_premium">Premium</string>
+    <string name="label_games">Games</string>
+    <string name="label_buy">Buy</string>
+    <string name="label_watch_tap_play_win">Watch. Tap. Play. Win.</string>
+    <string name="label_purchases">Purchases</string>
+    <string name="label_language_setting">Language Settings</string>
+    <string name="label_avatar">iTap Avatar</string>
+    <string name="label_voucher">Vouchers</string>
+    <string name="label_offers">Offers</string>
+    <string name="label_rewards">Rewards</string>
+    <string name="label_more">More</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_subscribe">SUBSCRIBE</string>
+    <string name="label_share_now">SHARE NOW</string>
+    <string name="live_game">Live Game</string>
+    <string name="label_trivira">Trivia</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_continue">Continue</string>
+    <string name="earn_coins">EARN COINS</string>
+
+    <string name="label_itapcoin">iTAP</string>
+    <string name="label_itapdesc">WATCH - TAP - PLAY - WIN.</string>
+    <string name="label_earn_coin">EARN COINS</string>
+    <string name="label_spend_coin">SPEND COINS</string>
+    <string name="label_mycoupon">My Coupons</string>
+    <string name="label_allcoupon">All Coupons</string>
+    <string name="label_episode">EPISODES</string>
+    <string name="label_similar">Similar like this</string>
+    <string name="no_action">NO_ACTION</string>
+    <string name="learn_more_description">    • Download iTAP from the Play Store on your Android mobile phone and win 100 iCoins.
+    • Watch your favourite comedy skits, drama  web series, tv shows, mythological series.
+    • Answer simple questions related to the content and win iCoins.
+    • Buy premium content and get 50 iCoins with every film you buy for just Rs.10/-.
+    • Play exclusive games like SnapWin, Pool Prize  Spin the Wheel and win iCoins through lucky draw.
+    • Play engaging trivia games pertaining to Bollywood, Cricket  Kabaddi and win iCoins.
+    • Use your iCoins to buy discount vouchers.
+    • Win cash everyday - For every 1000 iCoins you stand a chance to get real cash of Rs. 30/- in your account.</string>
+
+    <string-array name="arra_home_tabs">
+        <item>@string/label_free</item>
+        <item>@string/label_play</item>
+        <item>@string/label_rent</item>
+        <!--<item>@string/label_read</item>-->
+    </string-array>
+
+    <string-array name="array_rewards_tabs">
+        <item>@string/label_redeem</item>
+        <item>@string/label_earn</item>
+        <item>@string/label_wallet</item>
+    </string-array>
+
+    <string-array name="array_redeem_tabs">
+        <item>@string/label_shop</item>
+        <item>@string/label_coupons</item>
+        <item>@string/label_vouchers</item>
+        <item>@string/label_win_cash</item>
+    </string-array>
+
+    <string-array name="array_wallet_tabs_id">
+        <item>@string/leaderboard_id</item>
+        <item>@string/earn_history_id</item>
+        <item>@string/redeem_history_id</item>
+    </string-array>
+
+    <string-array name="array_wallet_tabs">
+        <item>@string/leaderboard</item>
+        <item>@string/earn_history</item>
+        <item>@string/redeem_history</item>
+    </string-array>
+
+    <string-array name="array_diamonds_tabs">
+        <item>@string/buy_diamonds</item>
+        <item>@string/wallet</item>
+        <item>@string/label_redeem</item>
+    </string-array>
+
+    <string-array name="arra_play_tabs">
+        <item>@string/live_game</item>
+        <item>@string/label_trivira</item>
+    </string-array>
+
+    <string-array name="arra_learn_more_tabs">
+        <item>@string/label_earn_coin</item>
+        <item>@string/label_spend_coin</item>
+    </string-array>
+
+    <string-array name="arra_coupons_tabs">
+        <item>@string/label_allcoupon</item>
+        <item>@string/label_mycoupon</item>
+
+    </string-array>
+    <string-array name="arra_series_tabs">
+        <item>@string/label_episode</item>
+        <item>@string/label_similar</item>
+    </string-array>
+
+    <string-array name="arra_more_menu_id">
+        <item>@string/id_premium</item>
+        <item>@string/id_purchases</item>
+        <item>123</item>
+        <item>@string/id_my_watchlist</item>
+        <item>@string/id_downloads</item>
+        <item>@string/id_redeem_coupon</item>
+        <item>@string/id_refer_earn</item>
+        <item>@string/id_contact_us</item>
+        <item>@string/id_terms_of_uses</item>
+        <item>@string/id_privacy_policy</item>
+        <item>@string/id_refund_cancellation</item>
+        <item>@string/id_about</item>
+        <item>@string/id_logout</item>
+    </string-array>
+
+    <string-array name="arra_more_menu_name">
+        <item>@string/label_manage_subscriptions</item>
+        <item>@string/label_purchases</item>
+        <item>@string/label_language_setting</item>
+        <item>@string/label_my_watchlist</item>
+        <!--<item>@string/label_my_downloads</item>-->
+        <!--<item>@string/label_change_language</item>-->
+        <item>@string/label_downloads</item>
+        <item>@string/label_redeem_coupon</item>
+        <item>@string/label_refer_earn</item>
+        <item>@string/label_contact_us</item>
+        <item>@string/label_terms_of_uses</item>
+        <item>@string/label_privacy_policy</item>
+        <item>@string/label_refund_cancellation</item>
+        <item>@string/label_about</item>
+        <item>@string/label_logout</item>
+    </string-array>
+
+    <string-array name="arra_more_menu_icon">
+        <item>@drawable/ic_white_premium</item>
+        <item>@drawable/ic_purchases</item>
+        <item>@drawable/ic_languages</item>
+        <item>@drawable/ic_watchlist</item>
+        <!--<item>@drawable/ic_download</item>-->
+        <!--<item>@drawable/ic_language</item>-->
+        <item>@drawable/ic_download</item>
+        <item>@drawable/ic_gift</item>
+        <item>@drawable/ic_redeem</item>
+        <item>@drawable/ic_contact</item>
+        <item>@drawable/ic_terms</item>
+        <item>@drawable/ic_privacy</item>
+        <item>@drawable/ic_refund_cancellation</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/ic_logout</item>
+    </string-array>
+
+    <string-array name="arra_languages">
+        <item>English (en)</item>
+        <item>हिंदी (hi)</item>
+        <item>मराठी (mr)</item>
+    </string-array>
+
+    <string-array name="arra_id_languages">
+        <item>en</item>
+        <item>hi</item>
+        <item>mr</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_tilt_watch">Tilt &amp; Watch</string>
+    <string name="label_view_all">View all</string>
+    <string name="label_view_more">View More</string>
+    <string name="play_win_10_coins">Play &amp; Win - 10 Coins</string>
+    <string name="label_quick_trivia">Quick Trivia</string>
+
+    <!--Statc String,remove after dynamic -->
+    <string name="earn_coin_quest">How do I earn coins?</string>
+    <string name="spean_coin_quest">How do I Spend coins?</string>
+    <string name="ques_qnswer">Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="label_tap_here_to_listen"><u>Tap here to listen</u></string>
+    <string name="label_earn_you_register">Register and get</string>
+    <string name="label_earn_100_coins_when_you_register">100 iCoins</string>
+    <string name="label_iCoins">iCoins</string>
+    <string name="label_earn_200_coins">Earn - 200 coins</string>
+    <string name="label_On_finishing_every_season">On finishing every Season</string>
+    <string name="label_register_terms_n_policy_line1">By registering with us, you accept our</string>
+    <string name="label_register_terms_n_policy_line2">Terms of Use and Privacy Policy</string>
+    <string name="label_earn_coins">Earn coins</string>
+    <string name="label_button_like">Like</string>
+    <string name="label_name">Display Name</string>
+    <string name="label_button_add_to_watchlist">Add to\nWatchlist</string>
+    <string name="label_button_like_no">Like\n(%1$s)</string>
+    <string name="label_button_comment_no">Comment\n(%1$s)</string>
+    <string name="label_button_download_name">Download Offline\n%1$s</string>
+    <string name="label_button_comment">Comment</string>
+    <string name="label_button_share">Share</string>
+    <string name="label_button_visit_url">Visit URL</string>
+    <string name="error_msg_playback">Couldn\'t play this playback</string>
+    <string name="label_send_otp">Send OTP</string>
+    <string name="label_resend_otp">Resend OTP</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="channel_name">Media Playback</string>
+    <string name="text_date_time">%1$s - %2$s</string>
+    <string name="text_today_time">Today, %1$s</string>
+    <string name="text_tomorrow_time">Tomorrow, %1$s</string>
+    <string name="text_equal_date">%1$s, %2$s - %3$s</string>
+    <string name="text_end_date_time">%1$s</string>
+    <string name="text_end_today_time">Today, %1$s</string>
+    <string name="error_msg_expired_game_time">Sorry! Your game time is expired</string>
+    <string name="msg_winners_will_be_declared">Winners will be declared soon</string>
+    <string name="error_msg_start_game_time">Sorry! Your game time start from %1$s</string>
+    <string name="text_answer_before">Answer before %1$s</string>
+    <string name="msg_game_played">You played this game</string>
+    <string name="text_out_of_question">%1$s/%2$s</string>
+    <string name="text_playing_game">Thank you for playing!</string>
+    <string name="text_lucky_draw">Lucky draw winners will be announced %1$s.</string>
+
+    <string name="exit">EXIT</string>
+    <string name="share_now">SHARE NOW</string>
+    <string name="redeem_coins">Redeem iCoins</string>
+    <string name="redeem_coins_desc">Buy coupons with iCoins</string>
+    <string name="app_version">iTap v 0.1.24</string>
+
+    <string name="exo_download_notification_channel_name">Downloads</string>
+
+    <!-- Rewards Frag Texts -->
+    <string name="earn_frag_title">Win &amp; Earn iCoins</string>
+    <string name="help_text">Help</string>
+    <string name="label_redeem">Redeem</string>
+    <string name="label_earn">Earn</string>
+    <string name="label_wallet">Wallet</string>
+    <string name="label_shop">Shop</string>
+    <string name="label_coupons">Coupons</string>
+    <string name="label_vouchers">Vouchers</string>
+    <string name="label_win_cash">Win Cash</string>
+    <string name="label_win_cash_prize">Win Cash Prize</string>
+    <string name="label_no_win_cash_prize">Sorry, there are no offers available as of now.\n\nPlease check again later.</string>
+    <string name="label_win_cash_prize_desc">Redeem your iCoins to\nwin cash prizes</string>
+
+    <!--HOW TO PLAY GAME TEXTS-->
+    <string name="bollywood_how_to_play_desc">\u2022 Viewers can play exciting BOLLYWOOD TRIVIA game in two modes. 1 = PRACTICE &amp; 2 = 1 ON 1.\n\n
+\u2022 In the PRACTICE mode, the user can play on his/her own. He/She gets 10 questions in one set
+and for each correct answer the user scores 1 point.\n\n
+\u2022 It also has a 1 ON 1 mode, where the user can play with another online participant. If one
+doesn’t find an online partner, then the user can also PLAY SOLO.\n\n
+\u2022 In the 1 ON 1 mode, the user has to invest 20 icoins to play with his online opponent.\n\n
+\u2022 Both the player’s get an opportunity to answer questions alternatively. Whoever wins gets 30
+iCoins. The player who loses, doesn’t win anything.\n\n
+\u2022 The duration to answer the 1st two questions is 30 secs as the game progresses, the duration
+for giving the answers comes down to 15 secs progressively.\n\n
+\u2022 You can play this game unlimited number of times, in either modes.\n\n</string>
+
+    <string name="cricket_how_to_play_desc">\u2022 Viewers can play exciting CRICKET TRIVIA game in two modes. 1 = PRACTICE &amp; 2 = 1 ON 1.\n\n
+\u2022 In the PRACTICE mode, the user can play on his/her own. He/She gets 10 questions in one set
+and for each correct answer the user scores 1 point.\n\n
+\u2022 It also has a 1 ON 1 mode, where the user can play with another online participant. If one
+doesn’t find an online partner, then the user can also PLAY SOLO.\n\n
+\u2022 In the 1 ON 1 mode, the user has to invest 20 icoins to play with his online opponent.\n\n
+\u2022 Both the player’s get an opportunity to answer questions alternatively. Whoever wins gets 30
+iCoins. The player who loses, doesn’t win anything.\n\n
+\u2022 The duration to answer the 1st two questions is 30 secs as the game progresses, the duration
+for giving the answers comes down to 15 secs progressively.\n\n
+\u2022 You can play this game unlimited number of times, in either modes.\n\n</string>
+
+    <string name="kabaddi_how_to_play_desc">\u2022 Viewers can play exciting KABADDI TRIVIA game in two modes. 1 = PRACTICE &amp; 2 = 1 ON 1.\n\n
+\u2022 In the PRACTICE mode, the user can play on his/her own. He/She gets 10 questions in one set
+and for each correct answer the user scores 1 point.\n\n
+\u2022 It also has a 1 ON 1 mode, where the user can play with another online participant. If one
+doesn’t find an online partner, then the user can also PLAY SOLO.\n\n
+\u2022 In the 1 ON 1 mode, the user has to invest 20 icoins to play with his online opponent.\n\n
+\u2022 Both the player’s get an opportunity to answer questions alternatively. Whoever wins gets 30
+iCoins. The player who loses, doesn’t win anything.\n\n
+\u2022 The duration to answer the 1st two questions is 30 secs as the game progresses, the duration
+for giving the answers comes down to 15 secs progressively.\n\n
+\u2022 You can play this game unlimited number of times, in either modes.\n\n</string>
+
+
+    <string name="label_how_to_play">How to Play?</string>
+    <string name="label_exit">Exit</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_cancel_underline"><u>Cancel</u></string>
+    <string name="label_searching_opponent">Searching \nFor Opponent</string>
+    <string name="label_bingo">BINGO!</string>
+    <string name="label_correct">Correct!</string>
+    <string name="label_hurray">All questions answered..</string>
+    <string name="labelhurray">Hurray!</string>
+    <string name="label_all_question">All questions answered..</string>
+    <string name="label_oops">OOPS!</string>
+    <string name="label_wrong_answer">WRONG\nANSWER</string>
+    <string name="label_you_wrong_answer">YOU WERE WRONG</string>
+    <string name="label_sorry">Sorry!</string>
+    <string name="label_time_over">TIME\nOVER</string>
+    <string name="play_next_game">Play Next Game</string>
+    <string name="you_won">YOU WON</string>
+    <string name="you_lost">YOU LOST</string>
+    <string name="label_terms_of_use"><u>Terms of Use</u></string>
+    <string name="itap_wallet_balance">iTap Wallet Balance</string>
+    <string name="redeem_history">Redeem History</string>
+    <string name="redeem_history_desc">History of how you used iCoins</string>
+    <string name="learn_more">Learn More</string>
+    <string name="learn_more_desc">Know how to Earn &amp; Redeem iCoins</string>
+    <string name="wallet">Wallet</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="text_by">by %1$s</string>
+    <string name="pick_your_coupon">PICK YOUR COUPON</string>
+    <string name="you_can_buy_coupons_with_coins_in_your_wallet">You can buy coupons with coins in your wallet</string>
+    <string name="text_for_coupon"><font color='#12aaf7'>%1$s</font> <font color='#ffffff'> for %2$s iCoins</font></string>
+    <string name="earn_history">Earn History</string>
+    <string name="earn_history_desc">History of how you earned iCoins</string>
+    <string name="text_earn_history_descr"><font color='#12aaf7'>WON</font> <font color='#b4b4b4'>LIVE - Play &amp; Win</font></string>
+    <string name="buy_coupon">Buy coupon</string>
+    <string name="terms_n_conditions">Terms &amp; Conditions</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+    <string name="ok">Ok</string>
+    <string name="set">Set</string>
+    <string name="confirm_msg_redeem_coins">Are you sure you want to redeem your iCoins for this coupon?</string>
+    <string name="resend">Resend</string>
+    <string name="downloading_game_data">Downloading\nGame Data</string>
+    <string name="replay">Replay</string>
+    <string name="we_are_out_of_questions">Uh Oh!\nWe\'re out of questions</string>
+    <string name="wrong_answer">Wrong Answer</string>
+    <string name="try_another">Try Another</string>
+    <string name="text_won_coins">YOU WON %1$d COINS</string>
+    <string name="text_coin">%1$s</string>
+    <string name="text_your_balance_coins">Your Balance - %1$d iCoins</string>
+    <string name="text_coins">%1$d coins</string>
+    <string name="label_remind_me">Remind Me</string>
+    <string name="label_ask_a_question">Ask a question</string>
+    <string name="label_15_min">15 mins before</string>
+    <string name="label_30_min">30 mins before</string>
+    <string name="label_1_hr">1 hour before</string>
+
+    <string name="game_connecting_with_user">Connecting...</string>
+    <string name="game_joining_room">Joining...</string>
+    <string name="game_creating_room">Please wait...</string>
+    <string name="you">You</string>
+    <string name="opponent">Opponent</string>
+
+    <string name="error_msg_balance">Sorry!\nYou do not have sufficient balance\nPlay now to win coins</string>
+    <string name="label_playing_des"><font color='#b4b4b4'>Playing </font><font color='#12aaf7'>%1$s</font></string>
+    <string name="label_Answer_question_des"><font color='#b4b4b4'>Answered Question to </font><font color='#12aaf7'>%1$s</font></string>
+    <string name="label_coupon_desc"><font color='#12aaf7'>%1$s</font></string>
+    <string name="label_game_desc"><font color='#12aaf7'>Won</font><font color='#b4b4b4'> %1$s - %2$s</font></string>
+    <string name="label_registration_desc"><font color='#12aaf7'>Registering</font><font color='#b4b4b4'> on %1$s</font></string>
+    <string name="label_notificatin_for_won_coin">You won %1$d coins for playing %2$s</string>
+    <string name="text_total_earned_coins">%1$d coins</string>
+    <string name="win_upto_coins">%1$s iCoins</string>
+    <string name="success_message_coupon_purchase">Coupon has been sent to registered Email and Phone Number</string>
+    <string name="no_history_found">No History Found</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="leaderboard_id">301</string>
+    <string name="earn_history_id">302</string>
+    <string name="redeem_history_id">303</string>
+    <string name="leaderboard_desc">Check out the Gobal ranking</string>
+    <string name="opponent_s_turn">Opponent\'s\nTurn</string>
+    <string name="your_turn">Your\nTurn</string>
+    <string name="game_ends_by_time">Ends by %1$s</string>
+    <string name="winners_to_be_declared_by">Winners to be declared by \n%1$s</string>
+
+    <string name="action_token_expire">token expire</string>
+    <string name="action_logout">logout</string>
+    <string name="action_splash_login">new login</string>
+    <string name="single_player">Practice</string>
+    <string name="random_opponent">1 ON 1</string>
+    <string name="game_starting_in">Game starting in</string>
+    <string name="episode_name_with_index">%1$s. %2$s</string>
+
+    <string name="view_more_title">%1$s - %2$s</string>
+    <string name="rs_offer_price">\u20B9%1$s</string>
+    <string name="rs_mrp">\u20B9 %1$s</string>
+
+    <!-- SUBSCRIPTIONS MODULE TEXTS -->
+    <string name="offline_premium">iTAP - Offline Premium</string>
+    <string name="download_and_watch">Download &amp; Watch Offline*</string>
+    <string name="save_mobile_internet_data">Save Mobile Internet Data*</string>
+    <string name="watch_anywhere">Watch anywhere*</string>
+    <string name="starting_from">Starting from only</string>
+    <string name="min_sub_amount_default">Rs 25/month</string>
+    <string name="subject_to_tc">*Subject to Terms &amp; Conditions &amp; Privacy Policy</string>
+    <string name="downloads_primary_text_empty_state">Watch Offline on iTAP</string>
+    <string name="downloads_secondary_text_empty_state">Download your favourite videos\nto watch wherever you go without\nthe Internet.</string>
+    <string name="downloads_fav_videos_login_desc">Download your favourite videos\nand watch without Internet.</string>
+    <string name="downloads_button_empty_state">Browse Videos</string>
+    <string name="downloads_watch_now">Watch Now</string>
+    <string name="downloads_delete_video">Delete Video</string>
+    <string name="subscibe_download_and_watch">Subscribe, Download &amp; Watch Offline*</string>
+    <string name="terms_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="and"> &amp;</string>
+
+    <string name="offline_learn_more_content">Steps for downloading any videos to watch offline\n\n
+1. Download videos and enjoy watching without internet connection.\n\n
+2. Click on any video of your choice and go to DOWNLOAD OFFLINE option, Click on DOWNLOAD\n\n
+OFFLINE and it gets redirected to browser.\n\n
+3. Click on BUY NOW , Select any package.\n\n
+ Monthly – Rs 25/-\n\n
+ Quarterly – Rs 79.99/-\n\n
+ Yearly – Rs 99.99/-\n\n
+4. Enter ten digit mobile number to generate OTP.\n\n
+5. Enter card details to make payment.\n\n
+6. Your downloaded videos will be available in the DOWNLOADS section.</string>
+
+    <!--TRILLBID CREDENTIALS-->
+    <!--<string name="TRIL_SECRET">af0bf570-3ef4-4bd4-9dda-6a92e80c81ed</string>
+    <string name="TRIL_KEY">c1dfb0f35dca2c04</string>
+    <string name="TRIL_Channel_Name">Trillbit</string>
+    <string name="TRIL_Channel_Desc">Trillbit Notifications.</string>
+    <string name="TRIL_Channel_ID">Trillbit</string>-->
+
+    <!--RAZORPAY CREDENTIALS-->
+    <!--<string name="RAZORPAY_APIKEY">rzp_test_xLz9LuntPqujXU</string>-->
+    <!--<string name="RAZORPAY_APIKEY">rzp_test_EGU9EkaYWbU7yf</string>-->
+    <!--<string name="RAZORPAY_APIKEY">rzp_live_ga3NQhpruLZ5M1</string>-->
+
+    <string name="advertisement">Advt.</string>
+    <string name="use">Use</string>
+    <string name="divider">/</string>
+    <string name="win">Win</string>
+    <string name="percent_off">%1$s%% off</string>
+    <string name="duration">Duration</string>
+    <string name="label_offer_price">Offer Price:</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="paytm_desc_label">PayTm - Wallet, UPI, Banking &amp; Cards</string>
+    <string name="razorpay_desc_label">Google Pay, BHIM, PhonePe, Mobikwik, Freecharge, JioMoney, Airtel Money, PayZapp and more</string>
+    <string name="go_to_buy">View Catalogue</string>
+    <string name="go_to_store">Go to store</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="season_count">%1$s Seasons</string>
+    <string name="episode_count">%1$s Episodes</string>
+    <string name="song_count">%1$s Songs</string>
+    <string name="mrp_price">MRP: \u20B9 %1$s</string>
+    <string name="coins">%1$s Coins</string>
+    <string name="total_duration">%1$s %2$s</string>
+    <string name="saving">Saving \u20B9 %1$s with</string>
+    <string name="playlist">Playlist</string>
+    <string name="expires_in">Expiry: %1$s</string>
+    <string name="paid_rs">Paid: \u20B9 %1$s +</string>
+    <string name="paid">Paid:</string>
+    <string name="msg_item_expired">This item has been expired</string>
+    <string name="ends_in">Ends In</string>
+    <string name="starts_in">Starts in %1$s</string>
+    <string name="view_winners">View Winners</string>
+    <string name="search_hint">Type your search here</string>
+    <string name="label_poweredby">powered by iTap</string>
+    <string name="play_now">Play Now</string>
+    <string name="msg_purchase_success">Item has been purchased successfully</string>
+    <string name="view_purchases">View Purchases</string>
+    <string name="initial_timer_value">00:00</string>
+    <string name="in_association_with">In Association with</string>
+    <string name="win_coupons">Play &amp; Win coupons from</string>
+    <string name="question_count">Question %1$d of %2$d</string>
+    <string name="audio_playing">Audio Playing</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_edit_profile_name">Set Profile Name</string>
+    <string name="label_edit_mobile_number">Set Mobile Number</string>
+    <string name="label_edit_phone_number">Set Contact Details</string>
+    <string name="label_edit_profile_name_desc_live">You are required to set a display name before you join a live session.</string>
+    <string name="label_edit_profile_name_desc_redeem">You are required to set a display name before you proceed for redeeming coins.</string>
+    <string name="label_edit_mobile_number_desc">Please verify your phone number with us in order to continue your purchase.</string>
+    <string name="label_edit_profile_mob_desc">You are required to set mobile number before you start a game.</string>
+    <string name="label_my_watchlist">My Watchlist</string>
+    <string name="id_premium">199</string>
+    <string name="id_purchases">200</string>
+    <string name="id_my_watchlist">201</string>
+    <string name="id_downloads">202</string>
+    <string name="id_redeem_coupon">203</string>
+    <string name="id_refer_earn">204</string>
+    <string name="id_contact_us">205</string>
+    <string name="id_terms_of_uses">206</string>
+    <string name="id_privacy_policy">207</string>
+    <string name="id_refund_cancellation">208</string>
+    <string name="id_about">209</string>
+    <string name="id_logout">210</string>
+    <string name="label_my_downloads">My Downloads</string>
+    <string name="label_downloads">Downloads</string>
+    <string name="label_change_language">Change Language</string>
+    <string name="label_manage_subscriptions">Manage Subscriptions</string>
+    <string name="label_redeem_icoins">Redeem iCoins</string>
+    <string name="label_redeem_coupon">Redeem Voucher</string>
+    <string name="label_redeem_your_voucher">Redeem your Voucher</string>
+    <string name="label_enter_voucher">Enter the Voucher code</string>
+    <string name="label_voucher_redeemed">Free via Voucher</string>
+    <string name="label_enter_coupon">Enter Coupon</string>
+    <string name="label_enter_coupon_code">Enter Coupon Code</string>
+    <string name="label_enter_voucher_code">Enter Voucher Code</string>
+    <string name="label_contact_us">Contact Us</string>
+    <string name="label_terms_of_uses">Terms of Use</string>
+    <string name="label_privacy_policy">Privacy Policy</string>
+    <string name="label_refund_cancellation">Refunds &amp; Cancellation</string>
+    <string name="label_refer_earn">Refer &amp; Earn</string>
+    <string name="label_about">About</string>
+    <string name="label_local">Local</string>
+    <string name="balance">Balance:</string>
+    <string name="next_game">Next Game</string>
+    <string name="share">Share</string>
+    <string name="download_percent">%1$s%%</string>
+    <string name="label_save">Save</string>
+    <string name="label_redeem_desc">Win Cash Daily from your iCoins</string>
+    <string name="label_redeem_expired">The offer is expired for today\n Try your luck again tomorrow</string>
+
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="label_verify">Verify</string>
+    <string name="label_voucher_book">Voucher Book</string>
+    <string name="action_take_photo">Take Photo</string>
+    <string name="action_choose_from_gallery">Choose from Gallery</string>
+    <string name="action_select_avatar">Select Avatar</string>
+    <string name="action_remove_profile_photo">Remove Profile Photo</string>
+
+    <string name="label_set_profile_image">Set Profile Photo...</string>
+    <string name="labal_email">Email Address</string>
+    <string name="no_opponent_found">No Opponent\nfound</string>
+    <string name="play_single_player_game">Play Single Player Game</string>
+    <string name="oops_internet_connection_lost">OOPS!\nInternet Connection Lost</string>
+    <string name="recovering_connection">Recovering\nConnection</string>
+    <string name="game_paused">Game Paused</string>
+    <string name="retry">Retry</string>
+    <string name="play_solo">Play Solo</string>
+    <string name="opponent_s_connection_is_weak">Opponent\'s connection\nis weak</string>
+    <string name="play_game">Play Game</string>
+    <string name="presenter_login">Presenter Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="scheduled_time">%1$s | %2$s mins</string>
+
+    <!--LIVE Module Strings-->
+    <string name="live_activity_title">LIVE Sessions</string>
+    <string name="go_live_now">Go Live Now</string>
+    <string name="send">Send</string>
+    <string name="maxword">Max 200 words</string>
+    <string name="start_now">Start Now</string>
+    <string name="live_ask_a_ques">Ask a Q</string>
+    <string name="ask_question_hint">Write your question here..</string>
+    <string name="all_questions_activity_title">All Questions</string>
+    <string name="pause_live_session">Pause Session</string>
+    <string name="resume_live_session">Resume Session</string>
+    <string name="pause_live_session_description">Live Stream Paused.</string>
+    <string name="cannot_publish">Unable to Go Live</string>
+    <string name="close_dialog_title">Close Session?</string>
+    <string name="name">Name</string>
+    <string name="phoneNumber">Contact Number</string>
+    <string name="close_dialog_description">Are you sure to close this session?</string>
+    <string name="past_dialog_title">Close Stream?</string>
+    <string name="past_dialog_description">Are you sure to close this stream?</string>
+    <string name="pause_dialog_title">Pause Session?</string>
+    <string name="pause_dialog_description">Do you wish to pause this live session?</string>
+    <string name="ask_a_q_desc">Question Sent Successfully</string>
+    <string name="see_upcoming">See Upcoming</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="search">Search</string>
+    <string name="enroll_now">Enroll Now</string>
+    <string name="view_more_episodes">View More Episodes</string>
+    <string name="play_n_amp_nwin">Play and Win</string>
+    <!--For youtube-->
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="play_n_amp_nwin1">Play\n   &amp; \nWin</string>
+    <string name="refer_text">\u0020 Invite a friend and you\'ll both \nearn %s iCoins which will be added\nin your wallet.</string>
+    <string name="collect_your_gift_on_entering_your_invite_code">Collect your Gift on Entering your invite Code</string>
+    <string name="collect_your_gift_on_entering_your_coupon_code">Collect your Gift on\nEntering your Coupon Code</string>
+    <string name="enter_voucher_code">Enter the Voucher Code</string>
+    <string name="we_re_so_delighted_you_re_here">We\'re so delighted you\'re here!</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="label_success">Success</string>
+
+    <string name="track_selection_title">Select tracks</string>
+
+    <string name="sample_base64_image">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</string>
+
+    <!--esports-->
+    <string name="or">OR</string>
+    <string name="buy_now_for">BUY NOW FOR </string>
+    <string name="itap_premium">iTap Premium</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="enter_tournament">Enter Tournament</string>
+    <string name="join_telegram_channel">Join Telegram Channel</string>
+    <string name="create_team">Create Team</string>
+    <string name="join_team">Join Team</string>
+    <string name="registration_dates">Registration Dates</string>
+    <string name="dash">-</string>
+    <string name="tournament_dates">Tournament Dates</string>
+    <string name="entry_criteria">Entry Criteria:</string>
+    <string name="prize">Prize:</string>
+    <string name="rules">Rules</string>
+    <string name="payment_status">Payment Status:</string>
+    <string name="team_leader_freefire_uid">Team Leader Freefire UID</string>
+    <string name="team_name">Team Name</string>
+    <string name="team_leader_name">Team Leader Name</string>
+    <string name="team_leader_phone_number_linked_to_whatsapp">Team Leader Phone number (Linked to Whatsapp)</string>
+    <string name="please_select_your_payment_option">Please select your payment option</string>
+    <string name="your_freefire_uid">Your Freefire UID</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_phone_number_linked_to_whatsapp">Your Phone number (Linked to Whatsapp)</string>
+    <string name="you_have_already_registered_for_a_tournament_for_these_dates">You have already registered for a tournament for these dates.</string>
+
+    <string name="no_internet_connection">No internet connection found.\nPlease check your connection.</string>
+    <string name="registration_reward">Registration Rewards:</string>
+    <string name="itap_please_update">Looks like you’re using an older version of iTap. Please update to the latest version on Google Playstore!</string>
+    <string name="update_app">Update App</string>
+
+    <string name="ad_mob_banner">ca-app-pub-7640170572457882/3389984124</string>
+    <string name="skip_ad">Skip Ad</string>
+    <string name="create_a_new_avatar">Create a New Avatar</string>
+    <string name="create_your_unique_avatar_today">The gateway to the metaverse is now open. Create your unique avatar today.</string>
+    <string name="set_as_itap_avatar">Set as iTap Avatar</string>
+    <string name="try_again">Try Again</string>
+    <string name="premium">BUY PREMIUM</string>
+    <string name="know_more">Know more</string>
+    <string name="buy_premium">Buy Premium Subscription</string>
+    <string name="choose_your_plan">Choose your plan</string>
+    <string name="pay_via">Pay Via</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="enter_coupon_code">Enter Coupon Code</string>
+    <string name="apply">APPLY</string>
+    <string name="pay_subscribe">Pay &amp; Subscribe</string>
+    <string name="paytm">Paytm</string>
+    <string name="razorpay">Razorpay</string>
+    <string name="go_to_premium_section">Go to Premium Section</string>
+    <string name="thank_you_for_subscribing">Thank you for subscribing to iTap. \n You can start watching premium content now.</string>
+
+    <!--Coupons-->
+    <string name="copied_to_clipboard">Copied to Clipboard</string>
+    <string name="expires_on">Expires on \u0020</string>
+    <string name="icoins">\u0020 iCoins</string>
+    <string name="copied">Copied</string>
+    <string name="copied_Coupon">Copied Coupon : \u0020</string>
+    <string name="use_offer">Use Offer</string>
+    <string name="redeem_on">Redeem on</string>
+    <string name="current_time">Current time => \u0020</string>
+
+    <string name="share_content">Share content</string>
+    <string name="downloading">Downloading...</string>
+    <string name="full_body_avatar">FullBodyAvatar</string>
+    <string name="avatar">Avatar</string>
+
+    <string name="select_picture">Select Picture</string>
+    <string name="permission_denied">Permission Denied</string>
+
+    <string name="product_id_missing">Product id missing.</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="failed_to_initiate_payment">Failed to initiate payment.</string>
+    <string name="error_in_payment">Error in Payment</string>
+    <string name="razorpay_payment_id_is_null">Razorpay payment id is null.</string>
+    <string name="failed_to_complete_payment">Failed to COMPLETE payment.</string>
+    <string name="there_was_a_network_error">There was a network error.</string>
+    <string name="device_does_not_have">Device doesn\'t have TLS 1.1 or TLS 1.2</string>
+    <string name="order_request_parameters_not_received">Order request parameters not received. Try again.</string>
+    <string name="transaction_failed">Transaction Failed.</string>
+    <string name="network_connection_error">Network connection error: Check your internet connectivity</string>
+    <string name="client_authentication_failed">Client Authentication failed: Server error</string>
+    <string name="ui_errror">UI Error \u0020</string>
+    <string name="unable_to_load_webpage">Unable to load webpage iniErrorCode = \u0020</string>
+    <string name="transaction_cancelled">Transaction cancelled</string>
+
+    <string name="type_something_here">Type something here...</string>
+    <string name="failed_to_comment">Failed to comment</string>
+    <string name="comments">Comments</string>
+    <string name="opening_bracket">(</string>
+    <string name="closing_bracket">)</string>
+    <string name="enter_comment">Enter Comment</string>
+
+    <string name="please_enter_a_code">Please enter a code</string>
+    <string name="some_error_occurred">Some Error Occurred. Please Try again later</string>
+
+    <string name="please_enter_a_valid_mobile_number">Please enter a valid mobile number</string>
+    <string name="please_enter_country_code">Please enter a Country Code</string>
+    <string name="error_enter_team_name">Please enter team name</string>
+    <string name="error_enter_team_leader_UID">Please enter team leader UID</string>
+    <string name="error_enter_leader_name">Please enter leader name</string>
+
+    <string name="playback_error">Playback Error: (what: %s; extra: %s)</string>
+    <string name="label_itap">iTap</string>
+    <string name="i_won">I won \u0020</string>
+    <string name="iCoins_by_playing">\u0020 iCoins by playing \u0020</string>
+    <string name="on_iTap">\u0020 on iTap</string>
+    <string name="play">Play</string>
+    <string name="download_iTap_now">Download iTap now: \u0020</string>
+    <string name="share_game_result">Share Game Result</string>
+
+    <string name="your_time_is_over">Sorry! Your time is over.</string>
+    <string name="download_iTap_now_and_play">Download iTap now and play \u0020</string>
+
+    <string name="played">Played \u0020</string>
+    <string name="failed_to_subscribe">Failed to subscribe</string>
+    <string name="result">Result: \u0020</string>
+    <string name="total_items_loaded">Total items loaded: %d. \nLoading more…</string>
+
+    <string name="added_to_watchlist">Added To Watchlist.</string>
+    <string name="removed_to_watchlist">Removed From Watchlist.</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="download_offline">Download Offline</string>
+    <string name="hey_watch">Hey, watch \u0020</string>
+    <string name="check_it_out_now_on_iTap">\u0020 . Check it out now on iTap!</string>
+    <string name="no_media_added_to_the_queue">No media added to the queue.</string>
+    <string name="this_content_is_exclusive_to_premium_members">Hey, this content is exclusive to premium members. Subscribe now to gain access</string>
+    <string name="error_enter_your_UID">Please enter your UID</string>
+    <string name="error_enter_your_name">Please enter your name</string>
+    <string name="error_select_language_preference">Please select a Language Preference</string>
+    <string name="no_language_found">No Language Found.</string>
+    <string name="note">Note</string>
+    <string name="reset_your_language_preferences">This will reset your Language Preferences and restart the app.</string>
+    <string name="no_data_found">No Data Found.</string>
+    <string name="accept_terms_of_use_and_privacy_policy">Please accept the Terms of Use and Privacy Policy to proceed further!</string>
+    <string name="enter_the_otp_received">Please enter the otp received on your entered mobile number. Tap \'Resend OTP\' if not received.</string>
+    <string name="feature_disabled">Feature Disabled</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="token_expired">Token Expired</string>
+    <string name="your_token_has_been_expired">Sorry! Your token has been expired.</string>
+
+    <string name="to_our">To our \u0020</string>
+    <string name="lucky_winners"> Lucky Winners</string>
+
+    <string name="licence_expired">Licence Expired!</string>
+    <string name="download_the_content_again">Please download the content again to view in offline mode.</string>
+    <string name="error_item_cannot_be_played">Item cannot be played. Please download again.</string>
+    <string name="offline_licence_expired">Offline licence expired. Please re-download the content to view it offline.</string>
+    <string name="error_playback">Playback Error!</string>
+    <string name="media_item_not_found">Media item not found, please download again for offline playback.</string>
+
+    <string name="live_stream_was_finished">This Live Stream was finished.</string>
+
+    <string name="active_subscription_until">*You have an active subscription until \u0020</string>
+    <string name="no_purchases_found">No Purchases found</string>
+
+    <string name="select_an_answer">Please select an answer</string>
+    <string name="thanks_for_your_response">Thanks for your response</string>
+    <string name="no_questions_found">No Questions Found.</string>
+
+    <string name="invite_a_friend">Invite a Friend</string>
+    <string name="refer_messsage"> Invite a friend and you’ll both earn iCoins. \n %s iCoins will be added to your wallet and</string>
+    <string name="friend_refer">\n %s iCoins to your friends wallet.</string>
+    <string name="download_itap_message">Download iTap to Watch.Tap.Play.Win </string>
+    <string name="using_referral_code">Using referral code : </string>
+    <string name="share_via">Share via</string>
+    <string name="copied_invite_code">Copied invite code : </string>
+    <string name="error_message_referral_code">Please enter the referral code and continue</string>
+
+    <string name="lucky_draw_entered">Lucky Draw Entered!</string>
+    <string name="you_have_received">You have received \u0020</string>
+    <string name="icoins_from_referral">\u0020 iCoins from referral</string>
+    <string name="best_of_luck_message">Best of luck for the lucky draw on 31st July.\n Winner will be notified in the app.</string>
+
+    <string name="invalid_attachment_url">Invalid attachment url</string>
+    <string name="trailer">\u0020 - Trailer</string>
+    <string name="unable_to_play_the_promo">Unable to play the promo. Error: \u0020</string>
+    <string name="leader_payment_pending">(Leader/Payment Pending)</string>
+    <string name="payment_pending">(Payment Pending)</string>
+    <string name="leader">(Leader)</string>
+    <string name="payment_paid">Paid</string>
+    <string name="pending">Pending</string>
+
+    <string name="user_token_expired">User token expired.</string>
+    <string name="url_not_found">Url Not Found</string>
+    <string name="whatsapp_has_not_been_installed">Whatsapp has not been installed</string>
+    <string name="stripe">Stripe</string>
+
+    <string name="NO_CONNECTIVITY_ERROR">The Internet connection appears to be offline.</string>
+    <string name="GENERIC_API_ERROR_MESSAGE">Some error occurred. Please try again later.</string>
+
+    <string name="play_audio">Play Audio</string>
+    <string name="option_selected">Option 4 selected</string>
+    <string name="try_something_here">Type something here...</string>
+
+    <string name="sure_to_remove">Are you sure you want to remove %1$s? You won\'t be able to view this content offline until you download it again.</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="you_have_subscribed_successfully">You\'ve subscribed successfully.</string>
+    <string name="download_failed">Download failed!</string>
+    <string name="download_queued">Download queued</string>
+    <string name="removing_download">Removing download...</string>
+    <string name="restarting_download">Restarting download...</string>
+    <string name="restarting_stopped">Download stopped.</string>
+    <string name="NA">NA</string>
+    <string name="please_buy">Please Buy</string>
+
+    <string name="icoins_deducted">\u0020 iCoins will be deducted for watching this content. \n Are you sure?</string>
+    <string name="live">Live</string>
+    <string name="no_content_available">No Content Available</string>
+    <string name="logout_message">Are you sure to Logout?</string>
+    <string name="connect_with_google">Connect with Google</string>
+    <string name="google_linked">Google Linked</string>
+    <string name="connect_with_facebook">Connect with Facebook</string>
+    <string name="facebook_linked">Facebook Linked</string>
+
+    <string name="please_enter_your_name">Please enter your name</string>
+    <string name="no_item_found">No Item Found</string>
+    <string name="please_enter_your_email">Please enter your email</string>
+    <string name="please_enter_otp">Please enter OTP</string>
+    <string name="verify_phone_number">Verify Phone Number</string>
+    <string name="verify_email_address">Verify Email Address</string>
+    <string name="please_enter_code">Please enter a code</string>
+
+    <string name="error_contact_us">Something went wrong. \nPlease contact us for any queries.</string>
+    <string name="failed_to_start_download">Failed to start download.</string>
+    <string name="unable_to_play">Unable to play this item. Playing next...</string>
+    <string name="item_skipped">Item skipped. This item requires a valid licence.</string>
+    <string name="iTap_media_streaming_channel">iTap media streaming channel</string>
+    <string name="label_for">\u0020 for \u0020</string>
+    <string name="download_finished">Download Finished!</string>
+    <string name="error_payment">Error in payment: \u0020</string>
+    <string name="unable_to_complete_operation">Unable to complete operation. Please try again later</string>
+    <string name="no_attachments_to_download">No attachments to download</string>
+
+    <string name="subscribe_to_use_the_download_feature">Please Subscribe to use the download feature</string>
+    <string name="file_already_downloaded">File already downloaded.</string>
+    <string name="download_not_supported">Download not supported.</string>
+
+    <string name="recovering">Recovering...</string>
+    <string name="exception_in_initilization">Exception in Initialization</string>
+    <string name="can_not_disconnect">Can\'t Disconnect</string>
+    <string name="invalid_move">Invalid Move: Not Your Turn</string>
+    <string name="room_creation_failed">Room creation failed</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="send_move_failed">Send Move Failed</string>
+    <string name="connection_success">Connection Success</string>
+    <string name="connection_recovered">Connection Recovered</string>
+    <string name="recoverable_connection_error">Recoverable connection error. Recovering session after 5 seconds</string>
+    <string name="non_recoverable_connection_error">Non-recoverable connection error.</string>
+    <string name="login_with">Login: You can login with</string>
+
+    <string name="error_file_size">File size should not be more than 1 MB</string>
+    <string name="you_have_won">You\'ve won </string>
+    <string name="download">DOWNLOAD</string>
+    <string name="share_bold">SHARE</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="thank_you">Thank you! \nFor registering with us</string>
+    <string name="you_received_coins">You have received 100 iCoins for registration &amp; 100 iCoins for referral</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="coupons_offers">Coupons &amp; Offers</string>
+    <string name="powered_by_couponDunia">Powered by CouponDunia</string>
+    <string name="no_coupons_available">No coupons available!</string>
+    <string name="complete">Complete</string>
+    <string name="win_up_to">Win up to</string>
+    <string name="using">Using</string>
+    <string name="checkout">Checkout</string>
+    <string name="sign_in">Sign in</string>
+    <string name="cap_congratulations">CONGRATULATIONS</string>
+    <string name="wins">wins</string>
+    <string name="help">Help?</string>
+    <string name="no_coupons_purchased">No coupons purchased!</string>
+    <string name="invite_now">INVITE NOW</string>
+    <string name="share_your_invite_code">Share your invite code</string>
+    <string name="code">CODE</string>
+    <string name="copy">COPY</string>
+    <string name="redeem_now">REDEEM NOW</string>
+    <string name="enter_invite_code">Enter Invite Code</string>
+    <string name="buy">BUY</string>
+    <string name="watch">Watch</string>
+    <string name="s_or">or</string>
+    <string name="coins_for_entry">Coins for Entry:</string>
+    <string name="instruction">Instruction</string>
+    <string name="free_vouchers">Tap the icon below\nto get free vouchers</string>
+    <string name="channel_partners">Channel Partners</string>
+    <string name="youtube">Youtube</string>
+    <string name="item_has_been_purchased_successfully">Item has been purchased successfully</string>
+    <string name="comment">Comment</string>
+    <string name="total_won">TOTAL WON</string>
+    <string name="choose_your_language">Choose your preferred language</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="cancel_subscription">Cancel Subscription</string>
+    <string name="cancel_subscription_message">Are you sure you want to cancel your subscription?</string>
+    <string name="can_not_resubscribe_message">A new subscription cannot be bought till you have a valid subscription. To resubscribe please come back on \u0020</string>
+    <string name="no_plans_message">iTap Premium is still not available in your region. We will inform you as soon as it is activated.</string>
+    <string name="country_code_error_message">Sorry! iTap is currently not available in your region. Please try again later.</string>
+
+    <string name="trackier_app_id">c9f3b579-b1be-40df-abb1-a49927e978d2</string>
+    <string name="create">Create</string>
+    <string name="buy_diamonds">Buy Diamonds</string>
+</resources>
